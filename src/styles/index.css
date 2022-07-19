@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+   
+   /* body {
+      @apply text-slate-800
+   }
+
+   a {
+      @apply text-cyan-600
+   } */
+
+}
+
+@layer utilities {
+   .container {
+      @apply max-w-5xl mx-auto px-2 sm:px-4
+   }
+   /* .color-primary,
+   .navbar.color-primary a {
+      color: var(--primary-color);
+   }
+   .border-primary {
+      border-color: var(--primary-color);
+   } */
+
+}

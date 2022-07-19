@@ -33,7 +33,11 @@ body {
    font-weight: 400;
    overflow-x: hidden;
    position: relative;
-   background-color: #121212 !important;
-   color: #fff !important;
+   /* background-color: var(--background-color) !important; */
+   color: #fafafa !important;
    font-family: 'Centra', sans-serif !important;
 }
+/* 
+a {
+   color: var(--link-color)!important
+} */
