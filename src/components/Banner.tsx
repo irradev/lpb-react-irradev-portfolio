@@ -31,9 +31,9 @@ export const Banner = () => {
                               <span className="text-5xl">
                                  Soy Israel Vázquez
                               </span>
-                              <span className="txt-rotate h-10 text-3xl">
+                              <div className="txt-rotate text-3xl">
                                  <DynamicText isVisible={isVisible} />{' '}
-                              </span>
+                              </div>
                            </h1>
                            <p className="text-lg py-4">
                               Del diseño a la funcionalidad. Transformo tus
@@ -122,5 +122,13 @@ const DynamicText: FC<DynamicTextProps> = ({ isVisible }) => {
       }
    }, [time]);
 
-   return useMemo(() => <span className="wrap">{text}</span>, [text]);
+   return useMemo(
+      () => (
+         <div className="wrap">
+            <span>{text}</span>
+            <span className="intermittent-animation">|</span>
+         </div>
+      ),
+      [text]
+   );
 };
