@@ -44,7 +44,7 @@ export const Banner = () => {
                      )}
                   </TrackVisibility>
                </div>
-               <div className="mx-auto  w-full max-w-md">
+               <div className="mx-auto md:mr-0 w-full max-w-md">
                   <img
                      className="updown-animation"
                      src={graphic}
