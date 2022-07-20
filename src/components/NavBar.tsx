@@ -10,7 +10,7 @@ import logo from '../assets/img/logo.png';
 
 export const NavBar = () => {
    return (
-      <nav className="flex justify-center items-center px-1 w-full h-14  backdrop-blur-sm  fixed bottom-0 sm:sticky sm:top-0">
+      <nav className="flex justify-center items-center px-1 w-full h-14  backdrop-blur-sm  fixed bottom-0 z-30 sm:sticky sm:top-0">
          <div className="flex justify-between items-center  sm:container w-full ">
             <div className="hidden sm:block flex-shrink-0">
                <a
