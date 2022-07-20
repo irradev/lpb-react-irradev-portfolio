@@ -71,16 +71,16 @@ const DynamicText: FC<DynamicTextProps> = ({ isVisible }) => {
    const [isDeleting, setIsDeleting] = useState(false);
    const [index, setIndex] = useState(0);
    const [text, setText] = useState('');
+
    const toRotate = [
+      'Tec. Ingeniería de Software',
       'Desarrollador WEB',
       'Especialista en REACT',
       'Investigador UX',
-      // 'Técnico en Ingeniería',
       'Amante del Pixel Art <3',
    ];
 
    useEffect(() => {
-      console.log(miliSeconds);
       let ticker = setInterval(() => {
          setTime((time) => time + 1);
       }, miliSeconds);
@@ -108,7 +108,6 @@ const DynamicText: FC<DynamicTextProps> = ({ isVisible }) => {
       setText(updatedText);
 
       if (!isDeleting && updatedText === fullText) {
-         console.log('fullText Reached!');
          setIsDeleting(true);
          setIsStopInterval(true);
          setMiliSeconds((prevmiliSeconds) => prevmiliSeconds / 2);
