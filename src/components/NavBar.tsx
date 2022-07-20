@@ -34,8 +34,13 @@ export const NavBar = () => {
                      href="/#"
                      className="flex flex-col justify-center items-center"
                   >
-                     <AiOutlineHome className="text-3xl sm:hidden" />
-                     <span>Home</span>
+                     {/* <AiOutlineHome className="text-3xl sm:hidden" /> */}
+                     <img
+                        className="rounded-lg w-11  sm:hidden"
+                        src={logo}
+                        alt="irradev logo"
+                     />
+                     <span className="hidden sm:inline">Home</span>
                   </a>
                   <a
                      href="#"
