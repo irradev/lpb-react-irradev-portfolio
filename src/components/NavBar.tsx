@@ -14,7 +14,7 @@ export const NavBar = () => {
          <div className="flex justify-between items-center  sm:container w-full ">
             <div className="hidden sm:block flex-shrink-0">
                <a
-                  href="/#"
+                  href="#home"
                   className="hidden sm:flex justify-center items-center gap-2 text-3xl font-bold"
                >
                   <img
@@ -31,7 +31,7 @@ export const NavBar = () => {
             <div className="flex-grow sm:flex-grow-0 flex justify-around items-center text-xs sm:gap-8 sm:text-lg">
                <div className="flex-grow justify-around gap-1 sm:flex-grow-0 flex sm:gap-4 ">
                   <a
-                     href="/#"
+                     href="#home"
                      className="flex flex-col justify-center items-center"
                   >
                      {/* <AiOutlineHome className="text-3xl sm:hidden" /> */}
@@ -43,14 +43,14 @@ export const NavBar = () => {
                      <span className="hidden sm:inline">Home</span>
                   </a>
                   <a
-                     href="#"
+                     href="#skills"
                      className="flex flex-col justify-center items-center"
                   >
                      <BsCodeSlash className="text-3xl sm:hidden" />
                      <span>Skills</span>
                   </a>
                   <a
-                     href="#"
+                     href="#projects"
                      className="flex flex-col justify-center items-center"
                   >
                      <FiFolder className="text-3xl sm:hidden" />
@@ -76,7 +76,7 @@ export const NavBar = () => {
                   </a>
                </div>
                <a
-                  href="#contacto"
+                  href="#contact"
                   className="flex mxs:flex-col justify-center gap-1 items-center border-2 border-primary mr-3 px-3 py-2 mxs:mr-0 mxs:py-0 sm:mr-0 sm:flex-row sm:px-7 sm:py-2 sm:h-11 sm:uppercase sm:cursor-pointer "
                >
                   <BiSend className="text-2xl sm:hidden" />
