@@ -1,25 +1,28 @@
 import { useState, useEffect } from 'react';
-import logo from '../assets/img/logo.png';
 
-import {
-   BsGithub,
-   BsLinkedin,
-   BsTwitter,
-   BsJournalCode,
-   BsCodeSlash,
-} from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsTwitter, BsCodeSlash } from 'react-icons/bs';
 import { AiOutlineHome } from 'react-icons/ai';
 import { RiMenuUnfoldFill } from 'react-icons/ri';
 import { BiSend } from 'react-icons/bi';
 import { FiFolder } from 'react-icons/fi';
 
+import logo from '../assets/img/logo.png';
+
 export const NavBar = () => {
    return (
-      <div className="flex justify-center items-center px-1 w-full h-14  backdrop-blur-sm  fixed bottom-0 sm:sticky sm:top-0">
+      <nav className="flex justify-center items-center px-1 w-full h-14  backdrop-blur-sm  fixed bottom-0 sm:sticky sm:top-0">
          <div className="flex justify-between items-center  sm:container w-full ">
             <div className="hidden sm:block flex-shrink-0">
-               <a href="/#" className="hidden sm:block text-3xl font-bold">
-                  irradev
+               <a
+                  href="/#"
+                  className="hidden sm:flex justify-center items-center gap-2 text-3xl font-bold"
+               >
+                  <img
+                     className="rounded-full w-12"
+                     src={logo}
+                     alt="irradev logo"
+                  />
+                  <span>irradev</span>
                </a>
                <span className="flex flex-col justify-center items-center p-1 pr-2 sm:hidden">
                   <RiMenuUnfoldFill className="text-3xl sm:hidden" />
@@ -79,7 +82,7 @@ export const NavBar = () => {
             </div>
          </div>
          <BgOpacityEffect />
-      </div>
+      </nav>
    );
 };
 

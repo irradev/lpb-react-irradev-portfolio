@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Banner = () => {
    return (
-      <div className="">
+      <section className="banner" id="home">
          <div className="container">
             <br />
             <br />
@@ -20,6 +20,6 @@ export const Banner = () => {
             <br />
             <br />
          </div>
-      </div>
+      </section>
    );
 };
