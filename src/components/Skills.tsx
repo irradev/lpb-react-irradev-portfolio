@@ -102,11 +102,11 @@ export const Skills = () => {
                   <h2 className="text-xl uppercase">Tecnologías</h2>
                   <p className="text-secondary text-lg text-center py-4">
                      Experiencia en diferentes tecnologías tanto de{' '}
-                     <b>Backend</b> como de <b>Frontend</b>
+                     <b>Frontend</b> como de <b>Backend</b>
                   </p>
                   <div
                      ref={$skillsCardContainer}
-                     className="grid mxs:grid-cols-3 grid-cols-4 sm:grid-cols-6 md:grid-cols-8 py-4 sm:py-8"
+                     className="grid mxs:grid-cols-3 grid-cols-4 sm:grid-cols-6  py-4 sm:py-8"
                   >
                      {technologies.map((skill, index) => (
                         <CardSkill
