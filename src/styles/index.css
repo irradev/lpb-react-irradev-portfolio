@@ -4,19 +4,79 @@
 
 @layer base {
    
-   /* body {
-      @apply text-slate-800
+/************ Custom Font ************/
+   @font-face {
+      font-family: Centra;
+      src: url('../assets/font/CentraNo2-Bold.ttf');
+      font-weight: 700;
    }
 
-   a {
-      @apply text-cyan-600
-   } */
+   @font-face {
+      font-family: Centra;
+      src: url('../assets/font/CentraNo2-Medium.ttf');
+      font-weight: 500;
+   }
 
+   @font-face {
+      font-family: Centra;
+      src: url('../assets/font/CentraNo2-Book.ttf');
+      font-weight: 400;
+   }
+
+   /************ Default Css ************/
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+   }
+
+   html {
+      scroll-behavior: smooth;
+   }
+
+   body {
+      font-weight: 400;
+      overflow-x: hidden;
+      position: relative;
+      /* background-color: var(--background-color) !important; */
+      
+      /* @apply text-slate-100; */
+      color: #fafafa !important;
+      font-family: 'Centra', sans-serif !important;
+   }
+
+   @media screen and (max-width: 640px) {
+      html {
+
+      scroll-padding-top: 45px;
+      }
+      
+   }
+
+}
+
+@layer components {
+   /* .card-skill {
+      background-color: blue;
+      posittion: relative;
+   } */
 }
 
 @layer utilities {
    .container {
       @apply max-w-5xl mx-auto px-2 sm:px-4
+   }
+
+   .text-primary {
+      @apply text-slate-100;
+   }
+
+   .text-secondary {
+      @apply text-slate-300;
+   }
+
+   .text-mutted {
+      @apply text-slate-400;
    }
    /* .color-primary,
    .navbar.color-primary a {

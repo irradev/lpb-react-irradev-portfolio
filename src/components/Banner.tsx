@@ -35,7 +35,7 @@ export const Banner = () => {
                                  <DynamicText isVisible={isVisible} />{' '}
                               </div>
                            </h1>
-                           <p className="text-lg py-4">
+                           <p className="text-secondary text-xl py-4">
                               Del diseño a la funcionalidad. Transformo tus
                               ideas en aplicaciones web escalables con la
                               tecnología de ¡React!
@@ -74,8 +74,8 @@ const DynamicText: FC<DynamicTextProps> = ({ isVisible }) => {
 
    const toRotate = [
       'Tec. Ingeniería de Software',
-      'Desarrollador WEB',
-      'Especialista en REACT',
+      'Desarrollador Web',
+      'Especialista en React',
       'Investigador UX',
       'Amante del Pixel Art <3',
    ];
