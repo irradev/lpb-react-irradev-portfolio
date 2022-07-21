@@ -15,8 +15,9 @@ import {
    DiAngularSimple,
 } from 'react-icons/di';
 
-import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 import { SectionCard } from './ui/SectionCard';
+import 'animate.css';
 
 interface ITechnologies {
    id: number;
@@ -107,11 +108,12 @@ export const Skills = () => {
                      ref={$skillsCardContainer}
                      className="grid mxs:grid-cols-3 grid-cols-4 sm:grid-cols-6 md:grid-cols-8 py-4 sm:py-8"
                   >
-                     {technologies.map((skill) => (
+                     {technologies.map((skill, index) => (
                         <CardSkill
                            key={skill.id}
                            name={skill.name}
                            icon={skill.icon}
+                           index={index}
                         />
                      ))}
                   </div>
@@ -122,22 +124,28 @@ export const Skills = () => {
    );
 };
 
-const BackgroundEffect = () => {
-   return (
-      <div className="bg-gradient-to-bl from-slate-800 to-stone-800 absolute w-full h-full top-0 right-0 opacity-80 -z-10 rounded-lg"></div>
-   );
-};
-
 interface CardSkillProps {
    name: string;
    icon: ReactElement;
+   index: number;
 }
 
-const CardSkill: FC<CardSkillProps> = ({ name, icon }) => {
+const CardSkill: FC<CardSkillProps> = ({ name, icon, index }) => {
    return (
-      <div className="flex flex-col justify-center items-center hover:-translate-y-4 transition-all duration-300 ease-in-out cursor-default m-2">
-         <div className="text-6xl ">{icon}</div>
-         <span className="text-lg">{name}</span>
-      </div>
+      <TrackVisibility once={true}>
+         {({ isVisible }) => (
+            <div
+               className={`flex flex-col justify-center items-center hover:-translate-y-4 transition-all duration-300 ease-in-out cursor-default m-2
+         ${isVisible ? 'animate__animated animate__fadeInLeft' : ''}
+         `}
+               style={{
+                  animationDelay: `${index / 8}s`,
+               }}
+            >
+               <div className="text-6xl ">{icon}</div>
+               <span className="text-lg">{name}</span>
+            </div>
+         )}
+      </TrackVisibility>
    );
 };
