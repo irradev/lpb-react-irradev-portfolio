@@ -14,7 +14,7 @@ import 'animate.css';
 export const Banner = () => {
    return (
       <section className="banner " id="home">
-         <div className="container flex justify-center items-center h-full sm:h-screen">
+         <div className="container flex justify-center items-center h-full sm:h-screen ">
             <div className="grid grid-cols-1 md:grid-cols-2 w-full">
                <div className="flex items-center">
                   <TrackVisibility>
@@ -44,7 +44,7 @@ export const Banner = () => {
                      )}
                   </TrackVisibility>
                </div>
-               <div className="mx-auto md:mr-0 w-full max-w-md">
+               <div className="mx-auto md:mr-0 w-full max-w-xs md:max-w-md">
                   <img
                      className="updown-animation"
                      src={graphic}
