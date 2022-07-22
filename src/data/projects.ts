@@ -1,7 +1,7 @@
 import { FrontendProjects } from './frontendProjects';
 
 export type TProject = 'Frontend' | 'Backend' | 'Fullstack';
-export type TStatus = 'Desarrollando' | 'Terminado' | 'Actualizado';
+export type TStatus = 'Desarrollando' | 'Terminado' | 'Actualizado' | 'Antiguo';
 
 export interface IProject {
    id: string;
