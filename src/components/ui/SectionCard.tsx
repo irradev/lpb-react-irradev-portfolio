@@ -2,11 +2,17 @@ import React, { FC, ReactElement } from 'react';
 
 interface SectionCardProps {
    children: ReactElement;
+   className?: string;
 }
 
-export const SectionCard: FC<SectionCardProps> = ({ children }) => {
+export const SectionCard: FC<SectionCardProps> = ({
+   children,
+   className = '',
+}) => {
    return (
-      <div className="flex flex-col justify-center items-center p-4 relative rounded-lg z-10 shadow-lg  mx-auto">
+      <div
+         className={`flex flex-col justify-start items-center p-4 relative rounded-lg z-10 shadow-lg mx-auto ${className}`}
+      >
          {children}
 
          <BackgroundEffect />

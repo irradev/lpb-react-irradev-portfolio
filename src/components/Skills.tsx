@@ -96,7 +96,7 @@ export const Skills = () => {
          className="flex justify-center items-center h-screen relative"
          id="skills"
       >
-         <div className="container">
+         <div className="container mxs:mb-10">
             <SectionCard>
                <>
                   <h2 className="text-xl uppercase">Tecnologías</h2>
@@ -106,7 +106,7 @@ export const Skills = () => {
                   </p>
                   <div
                      ref={$skillsCardContainer}
-                     className="grid mxs:grid-cols-3 grid-cols-4 sm:grid-cols-6  py-4 sm:py-8"
+                     className="grid mxs:grid-cols-3 grid-cols-4 sm:grid-cols-6  mxs:py-0 py-4 sm:py-8"
                   >
                      {technologies.map((skill, index) => (
                         <CardSkill

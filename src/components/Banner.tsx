@@ -1,41 +1,35 @@
-import React, {
-   FC,
-   useCallback,
-   useEffect,
-   useMemo,
-   useRef,
-   useState,
-} from 'react';
+import React, { FC, useEffect, useMemo, useState } from 'react';
 import TrackVisibility from 'react-on-screen';
-import { BiSend } from 'react-icons/bi';
 import graphic from '../assets/img/graphic_banner.png';
 import 'animate.css';
 
 export const Banner = () => {
    return (
       <section className="banner " id="home">
-         <div className="container flex justify-center items-center h-full sm:h-screen ">
+         <div className="container flex justify-center items-center h-screen ">
             <div className="grid grid-cols-1 md:grid-cols-2 w-full">
-               <div className="flex items-center">
+               <div className="flex items-center text-center md:text-left">
                   <TrackVisibility>
                      {({ isVisible }) => (
                         <div
                            className={
                               isVisible
-                                 ? 'animate__animated animate__fadeIn'
+                                 ? 'animate__animated animate__bounceIn'
                                  : ''
                            }
                         >
-                           <h1 className="flex justify-center flex-col gap-4 font-bold mt-8 sm:mt-0">
-                              <span className="text-4xl">¡Hola!</span>
-                              <span className="text-5xl">
+                           <h1 className="flex justify-center flex-col gap-4 font-bold mt-8 sm:mt-0 ">
+                              <span className="text-3xl sm:text-4xl">
+                                 ¡Hola!
+                              </span>
+                              <span className="text-4xl mxs:text-2xl sm:text-5xl">
                                  Soy Israel Vázquez
                               </span>
-                              <div className="txt-rotate text-3xl">
+                              <div className="flex justify-center md:justify-start items-center w-full text-2xl h-12 sm:text-3xl mxs:text-xl">
                                  <DynamicText isVisible={isVisible} />{' '}
                               </div>
                            </h1>
-                           <p className="text-secondary text-xl py-4">
+                           <p className="text-secondary text-lg sm:text-xl pb-0 pt-4  mxs:pt-3">
                               Del diseño a la funcionalidad. Transformo tus
                               ideas en aplicaciones web escalables con la
                               tecnología de ¡React!
