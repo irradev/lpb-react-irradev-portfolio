@@ -43,6 +43,7 @@ export const Projects = () => {
                               <>
                                  {tabs.map((tab, index) => (
                                     <button
+                                       key={`button_tab_${index + 1}`}
                                        className={`
                                           bg-teal-700 
                                           text-sm font-bold mxs:text-xs
