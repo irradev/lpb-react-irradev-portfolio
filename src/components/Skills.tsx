@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useRef } from 'react';
+import React, { ReactElement, useRef } from 'react';
 
 import {
    DiHtml5,
@@ -15,8 +15,8 @@ import {
    DiAngularSimple,
 } from 'react-icons/di';
 
-import TrackVisibility from 'react-on-screen';
 import { SectionCard } from './ui/SectionCard';
+import { CardSkill } from './CardSkill';
 import 'animate.css';
 
 interface ITechnologies {
@@ -121,31 +121,5 @@ export const Skills = () => {
             </SectionCard>
          </div>
       </section>
-   );
-};
-
-interface CardSkillProps {
-   name: string;
-   icon: ReactElement;
-   index: number;
-}
-
-const CardSkill: FC<CardSkillProps> = ({ name, icon, index }) => {
-   return (
-      <TrackVisibility once={true}>
-         {({ isVisible }) => (
-            <div
-               className={`flex flex-col justify-center items-center hover:-translate-y-4 transition-all duration-300 ease-in-out cursor-default m-2
-         ${isVisible ? 'animate__animated animate__fadeInLeft' : ''}
-         `}
-               style={{
-                  animationDelay: `${index / 8}s`,
-               }}
-            >
-               <div className="text-6xl ">{icon}</div>
-               <span className="text-lg">{name}</span>
-            </div>
-         )}
-      </TrackVisibility>
    );
 };
