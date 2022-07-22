@@ -96,11 +96,11 @@ export const Skills = () => {
          className="flex justify-center items-center h-screen relative"
          id="skills"
       >
-         <div className="container mxs:mb-10">
+         <div className="container mxs:pb-12 pb-10 pt-0 sm:pb-0 sm:pt-12">
             <SectionCard>
                <>
                   <h2 className="text-xl font-bold uppercase">Tecnologías</h2>
-                  <p className="text-secondary text-lg text-center py-4">
+                  <p className="text-secondary text-lg text-center py-2 sm:py4">
                      Experiencia en diferentes tecnologías tanto de{' '}
                      <b>Frontend</b> como de <b>Backend</b>
                   </p>
