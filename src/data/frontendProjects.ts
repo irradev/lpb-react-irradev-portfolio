@@ -11,6 +11,7 @@ export const FrontendProjects: IProject[] = [
       urlGitHub: 'https://github.com/irradev/lpb-react-offerjobs',
       urlDemo: 'http://react-offerjobs-responsive-app.vercel.app/',
       type: 'Frontend',
+      status: 'Desarrollando',
    },
    {
       id: uuidv4(),
@@ -23,6 +24,7 @@ export const FrontendProjects: IProject[] = [
          'https://github.com/irradev/propuestas-open-bootcamp-ui-modal-hoja-de-ruta',
       urlDemo: 'http://ui-modal-hoja-de-ruta.vercel.app/',
       type: 'Frontend',
+      status: 'Terminado',
    },
    {
       id: uuidv4(),
@@ -34,5 +36,6 @@ export const FrontendProjects: IProject[] = [
          'https://github.com/irradev/propuestas-open-bootcamp-ui-modal-hoja-de-ruta',
       urlDemo: 'http://ui-modal-hoja-de-ruta.vercel.app/',
       type: 'Frontend',
+      status: 'Terminado',
    },
 ];
