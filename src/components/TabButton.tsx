@@ -33,24 +33,27 @@ export const TabButton: FC<TabButtonProps> = ({
             ${
                isActive
                   ? index === 0
-                     ? 'bg-gradient-to-r from-teal-600 to-teal-800'
+                     ? 'bg-gradient-to-r from-teal-600 to-teal-800 hover:to-teal-700'
                      : index === totalTabs
-                     ? 'bg-gradient-to-l from-teal-600 to-teal-800'
-                     : 'bg-gradient-to-r from-teal-800 via-teal-600 to-teal-800'
+                     ? 'bg-gradient-to-l from-teal-600 to-teal-800 hover:to-teal-700'
+                     : 'bg-gradient-to-r from-teal-800 via-teal-600 to-teal-800 hover:to-teal-800 hover:via-teal-700 hover:from-teal-800'
                   : 'bg-teal-900 '
             }
             ${
                isActive
-                  ? 'border-teal-500 shadow-teal-700'
-                  : 'border-teal-700 shadow-teal-800'
+                  ? 'border-teal-400 '
+                  : 'border-teal-700 hover:border-teal-400 '
             }
+
             text-sm font-bold mxs:text-xs
             border 
-            px-16 py-2.5 mxs:px-1 msx:py-1
+            px-4 sm:px-16 py-2 sm:py-2.5 mxs:px-2.5 msx:py-1
             uppercase tracking-wide 
             ${classNames} shadow-md 
             ${isVisible ? 'animate__animated animate__bounceIn' : ''}
             transition duration-300 ease-in-out
+            shadow-teal-900
+            hover:bg-teal-700
          `}
          onClick={onClick}
          style={{
