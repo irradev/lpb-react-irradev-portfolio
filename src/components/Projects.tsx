@@ -32,7 +32,7 @@ export const Projects = () => {
          <div className="container h-full pt-2 pb-16 sm:pt-6 sm:pb-16 md:pt-16 md:pb-4">
             <SectionCard className="h-full  relative">
                <div className=" h-full w-full relative">
-                  <h2 className="flex-srhink-0 text-xl text-center uppercase">
+                  <h2 className="flex-srhink-0 text-xl text-center font-bold uppercase">
                      Proyectos
                   </h2>
                   <div className=" flex flex-col-reverse sm:flex-col h-full w-full pb-3 sm:pb-6">
@@ -55,12 +55,20 @@ export const Projects = () => {
                            </div>
                         )}
                      </TrackVisibility>
-                     <div className="flex-grow bg-red-300 overflow-y-scroll mt-4 sm:mt-0">
+                     <div
+                        className={`
+                           flex-grow 
+                           ${projects.length > 0 ? 'overflow-y-scroll' : ''} 
+                           overflow-x-hidden 
+                           mt-4 sm:mt-0
+                        `}
+                     >
                         {projects.length > 0 ? (
                            listProjects
                         ) : (
-                           <div className="animate__animated animate__headShake flex justify-center items-center h-full w-full">
-                              No hay proyectos... por ahora.
+                           <div className="animate__animated animate__headShake flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 h-full w-full text-2xl text-center">
+                              <span>No hay proyectos...</span>
+                              <span>por ahora.</span>
                            </div>
                         )}
                      </div>
