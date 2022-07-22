@@ -15,11 +15,13 @@
       "react-icons": "^4.4.0",
       "react-multi-carousel": "^2.8.2",
       "react-on-screen": "^2.1.1",
-      "react-router-dom": "6"
+      "react-router-dom": "6",
+      "uuid": "^8.3.2"
    },
    "devDependencies": {
       "@types/react": "^18.0.15",
       "@types/react-dom": "^18.0.6",
+      "@types/uuid": "^8.3.4",
       "@vitejs/plugin-react": "^2.0.0",
       "autoprefixer": "^10.4.7",
       "postcss": "^8.4.14",
