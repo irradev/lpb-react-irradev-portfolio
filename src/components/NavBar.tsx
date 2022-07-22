@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
 import { BsGithub, BsLinkedin, BsTwitter, BsCodeSlash } from 'react-icons/bs';
-import { AiOutlineHome } from 'react-icons/ai';
 import { RiMenuUnfoldFill } from 'react-icons/ri';
 import { BiSend } from 'react-icons/bi';
 import { FiFolder } from 'react-icons/fi';
@@ -29,7 +28,7 @@ export const NavBar = () => {
                </span>
             </div>
             <div className="flex-grow sm:flex-grow-0 flex justify-around items-center text-xs sm:gap-8 sm:text-lg">
-               <div className="flex-grow justify-around gap-1 sm:flex-grow-0 flex sm:gap-4 ">
+               <div className="flex-grow justify-around gap-1 sm:flex-grow-0 flex sm:gap-4 font-medium sm:font-normal">
                   <a
                      href="#home"
                      className="flex flex-col justify-center items-center"
@@ -80,7 +79,7 @@ export const NavBar = () => {
                   className="flex mxs:flex-col justify-center gap-1 items-center border-2 border-primary mr-3 px-3 py-2 mxs:mr-0 mxs:py-0 sm:mr-0 sm:flex-row sm:px-7 sm:py-2 sm:h-11 sm:uppercase sm:cursor-pointer "
                >
                   <BiSend className="text-2xl sm:hidden" />
-                  <span className="mxs:text-xs text-base sm:text-lg">
+                  <span className="mxs:text-xs text-base sm:text-lg font-medium">
                      ¡Contáctame!
                   </span>
                </a>
