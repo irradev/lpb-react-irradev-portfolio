@@ -99,7 +99,7 @@ export const Skills = () => {
          <div className="container mxs:mb-10">
             <SectionCard>
                <>
-                  <h2 className="text-xl uppercase">Tecnologías</h2>
+                  <h2 className="text-xl font-bold uppercase">Tecnologías</h2>
                   <p className="text-secondary text-lg text-center py-4">
                      Experiencia en diferentes tecnologías tanto de{' '}
                      <b>Frontend</b> como de <b>Backend</b>
