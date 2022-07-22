@@ -38,7 +38,7 @@ export const Projects = () => {
                   <div className=" flex flex-col-reverse sm:flex-col h-full w-full pb-3 sm:pb-6">
                      <TrackVisibility>
                         {({ isVisible }) => (
-                           <div className="flex-shrink-0 flex justify-around sm:justify-center items-center  h-16 my-2">
+                           <div className="flex-shrink-0 flex justify-center items-center  h-16 my-2">
                               <>
                                  {tabs.map((tab, index) => (
                                     <TabButton
