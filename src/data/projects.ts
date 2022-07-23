@@ -1,4 +1,5 @@
 import { FrontendProjects } from './frontendProjects';
+import { orderProjectByStatus } from '../utils';
 
 export type TProject = 'Frontend' | 'Backend' | 'Fullstack';
 export type TStatus = 'Desarrollando' | 'Terminado' | 'Actualizado' | 'Antiguo';
@@ -15,4 +16,4 @@ export interface IProject {
    status: TStatus;
 }
 
-export const projects: IProject[] = [...FrontendProjects];
+export const projects: IProject[] = [...orderProjectByStatus(FrontendProjects)];

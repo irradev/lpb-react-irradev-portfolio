@@ -17,10 +17,34 @@ export const Projects = () => {
    }, [tabSelected]);
 
    const listProjects = useMemo(
-      () =>
-         projects.map((project) => (
-            <CardProject key={project.id} project={project} />
-         )),
+      () => (
+         <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-5 rounded-md">
+               {projects.map((project) => (
+                  <>
+                     <CardProject key={project.id} project={project} />
+                     <CardProject key={project.id} project={project} />
+                     <CardProject key={project.id} project={project} />
+                     <CardProject key={project.id} project={project} />
+                     <CardProject key={project.id} project={project} />
+                     <CardProject key={project.id} project={project} />
+                     <CardProject key={project.id} project={project} />
+                     <CardProject key={project.id} project={project} />
+                     <CardProject key={project.id} project={project} />
+                  </>
+               ))}
+            </div>
+
+            <div className="flex justify-center items-center w-full py-8">
+               <span
+                  className="text-base font-bold text-secondary tracking-wider  uppercase"
+                  style={{ wordSpacing: '4px' }}
+               >
+                  próximamente más proyectos...
+               </span>
+            </div>
+         </>
+      ),
       [projects]
    );
 
@@ -61,6 +85,8 @@ export const Projects = () => {
                            ${projects.length > 0 ? 'overflow-y-scroll' : ''} 
                            overflow-x-hidden 
                            mt-4 sm:mt-0
+                           rounded-md
+                           border border-teal-700
                         `}
                      >
                         {projects.length > 0 ? (
