@@ -123,6 +123,21 @@
       border-color: var(--primary-color);
    } */
 
+   /* .hidden-delay-animation {
+      animation-name: hidden-delay;
+       animation-duration: 0.5s;
+        animation-delay: 0.700s;
+   }
+
+   @keyframes hidden-delay {
+      0% {
+         opacity: 0.5;
+      }
+      100% {
+         transform: scale(0);
+      }
+   } */
+
    .updown-animation {
       animation: updown 3s linear infinite;
    }

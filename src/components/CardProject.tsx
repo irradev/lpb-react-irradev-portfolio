@@ -44,6 +44,7 @@ export const CardProject: FC<CardProjectProps> = ({
       }));
    };
 
+   // ? I think this implementaton is not the correct way...
    const quitFromFavorites = () => {
       let waitingForAnimation = setInterval(() => {
          if (favoriteProjects().length > 0) {

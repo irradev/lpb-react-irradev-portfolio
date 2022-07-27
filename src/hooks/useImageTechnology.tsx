@@ -28,6 +28,5 @@ export const useImageTechnology = (name: TTechnologies) => {
          );
       default:
          return <span className="text-xs font-bold">{name}</span>;
-         break;
    }
 };
