@@ -47,7 +47,7 @@ export const TabButton: FC<TabButtonProps> = ({
 
             text-sm font-bold mxs:text-xs
             border 
-            px-4 sm:px-16 py-2 sm:py-2.5 mxs:px-2.5 msx:py-1
+            px-4 sm:px-10 md:px-12 lg:px-16 py-2 sm:py-2.5 mxs:px-2.5 msx:py-1
             uppercase tracking-wide 
             ${classNames} shadow-md 
             ${isVisible ? 'animate__animated animate__bounceIn' : ''}

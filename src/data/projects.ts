@@ -1,5 +1,6 @@
 import { FrontendProjects } from './frontendProjects';
 import { orderProjectByStatus } from '../utils';
+import { TTechnologies } from './technologies.type';
 
 export type TProject = 'Frontend' | 'Backend' | 'Fullstack';
 export type TStatus = 'Desarrollando' | 'Terminado' | 'Actualizado' | 'Antiguo';
@@ -9,7 +10,7 @@ export interface IProject {
    name: string;
    shortDescription: string;
    image: string;
-   imageTechnologies: string[];
+   technologies: TTechnologies[];
    urlGitHub?: string;
    urlDemo?: string;
    type: TProject;
