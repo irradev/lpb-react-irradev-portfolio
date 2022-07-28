@@ -13,7 +13,7 @@ import imgIrraDevPortfolio from '../assets/img/projects/irradev-portfolio.png';
 export const FrontendProjects: IProject[] = [
    {
       id: 'irpo20137771',
-      name: 'irraDev Portfolio',
+      name: 'irradev Portfolio',
       shortDescription: 'Portafolio para proyectos digitales.',
       image: imgIrraDevPortfolio,
       technologies: ['React', 'Tailwind'],
