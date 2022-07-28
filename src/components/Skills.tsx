@@ -93,10 +93,10 @@ export const Skills = () => {
 
    return (
       <section
-         className="flex justify-center items-center relative"
+         className="flex justify-center items-center h-screen relative"
          id="skills"
       >
-         <div className="container ">
+         <div className="container mxs:pb-12 pb-10 pt-0 sm:pb-0 sm:pt-12">
             <SectionCard className="max-w-3xl rounded-xl">
                <>
                   <h2 className="text-xl font-bold uppercase">Tecnologías</h2>
