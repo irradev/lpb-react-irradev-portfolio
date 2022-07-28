@@ -17,6 +17,7 @@ export const ContactForm = () => {
    const {
       register,
       handleSubmit,
+      reset,
       formState: { errors },
    } = useForm<TInputs>();
 
@@ -41,6 +42,8 @@ export const ContactForm = () => {
             if (!res.ok) return Promise.reject(res);
 
             setIsSending(false);
+            reset();
+
             Swal.fire(
                '¡Mensaje enviado!',
                'Gracias por escribirme. En breve nos pondremos en contacto.',
@@ -50,6 +53,8 @@ export const ContactForm = () => {
 
          .catch((error) => {
             setIsSending(false);
+            reset();
+
             console.log(error);
             Swal.fire(
                'No se pudo enviar tu mensaje',
