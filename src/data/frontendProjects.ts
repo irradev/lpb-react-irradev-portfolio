@@ -8,8 +8,20 @@ import imgDevCorelPortfolio from '../assets/img/projects/devcorel-portfolio.png'
 import imgViteTypescriptNotes from '../assets/img/projects/vite-typescript-notes.png';
 import imgReactVirtualizedDataTables from '../assets/img/projects/react-virtualized-data-tables.png';
 import imgReactMessengerOld from '../assets/img/projects/react-messenger-old.png';
+import imgIrraDevPortfolio from '../assets/img/projects/irradev-portfolio.png';
 
 export const FrontendProjects: IProject[] = [
+   {
+      id: 'irpo20137771',
+      name: 'irraDev Portfolio',
+      shortDescription: 'Portafolio para proyectos digitales.',
+      image: imgIrraDevPortfolio,
+      technologies: ['React', 'Tailwind'],
+      urlGitHub: 'https://github.com/irradev/lpb-react-portfolio',
+      urlDemo: 'https://irradev-portfolio.vercel.app/',
+      type: 'Frontend',
+      status: 'Terminado',
+   },
    {
       id: 'ofreap132',
       name: 'OfferJobs Responsive App',
