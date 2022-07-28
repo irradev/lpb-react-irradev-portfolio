@@ -22,6 +22,6 @@ export const SectionCard: FC<SectionCardProps> = ({
 
 const BackgroundEffect = () => {
    return (
-      <div className="bg-gradient-to-bl from-slate-800 to-stone-800 absolute w-full h-full top-0 right-0 opacity-80 -z-10 rounded-lg"></div>
+      <div className="bg-gradient-to-bl from-slate-800 to-stone-800 absolute w-full h-full top-0 right-0 opacity-80 -z-10 rounded-xl"></div>
    );
 };

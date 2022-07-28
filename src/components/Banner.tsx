@@ -15,7 +15,7 @@ export const Banner = () => {
 
    return (
       <section className="banner " id="home">
-         <div className="container flex justify-center items-center h-full md:h-screen pb-12 sm:pb-14 pt-0 sm:pt-10 md:pt-0">
+         <div className="container flex justify-center items-center  ">
             <div className="grid grid-cols-1 md:grid-cols-2 w-full">
                <div className="flex items-center text-center md:text-left">
                   <TrackVisibility>
