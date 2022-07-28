@@ -9,12 +9,11 @@ export const SocialNetworks = () => {
 
    return (
       <div className="flex flex-col justify-center items-center text-shadow-xs">
-         <h2 className="text-secondary text-2xl font-bold">
-            Dame un{' '}
+         <h2 className="text-secondary text-2xl font-bold w-full text-center">
+            Te agradecería darme un{' '}
             <span className="text-lg font-medium uppercase tracking-wide">
                follow
             </span>{' '}
-            en mis redes sociales
          </h2>
          <div className="w-full">
             <TrackVisibility once={true}>
