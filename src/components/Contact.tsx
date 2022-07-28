@@ -6,7 +6,7 @@ export const Contact = () => {
    return (
       <div className="bg-slate-800 mt-8" id="contact">
          <div className="container pt-6 pb-16 md:pb-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 w-full">
+            <div className="flex flex-col sm:flex-row justify-between items-center w-full">
                <ContactForm />
                <SocialNetworks />
             </div>
