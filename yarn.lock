@@ -970,6 +970,11 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-hook-form@^7.33.1:
+  version "7.33.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.33.1.tgz#8c4410e3420788d3b804d62cc4c142915c2e46d0"
+  integrity sha512-ydTfTxEJdvgjCZBj5DDXRc58oTEfnFupEwwTAQ9FSKzykEJkX+3CiAkGtAMiZG7IPWHuzgT6AOBfogiKhUvKgg==
+
 react-icons@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.4.0.tgz#a13a8a20c254854e1ec9aecef28a95cdf24ef703"
@@ -1111,6 +1116,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+sweetalert2@^11.4.24:
+  version "11.4.24"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.4.24.tgz#9dbe1e3096d6fd739e03d5c5fe2d218638fceaf4"
+  integrity sha512-wbD3SbaOhWyebVfnrY9rMjjVf7ZKUHjmn5Ch83NWUg84b/SYn0N4F0Dhxq3QYSAbnAQ7ArovQb2JfxZi5+Ieug==
 
 tailwindcss@^3.1.6:
   version "3.1.6"

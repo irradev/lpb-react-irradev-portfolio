@@ -1,8 +1,9 @@
 import React from 'react';
-import { Banner } from '../components/Banner';
 import { NavBar } from '../components/NavBar';
-import { Projects } from '../components/Projects';
+import { Banner } from '../components/Banner';
 import { Skills } from '../components/Skills';
+import { Projects } from '../components/Projects';
+import { Contact } from '../components/Contact';
 
 export const MainLayout = () => {
    return (
@@ -12,6 +13,7 @@ export const MainLayout = () => {
             <Banner />
             <Skills />
             <Projects />
+            <Contact />
          </div>
       </div>
    );

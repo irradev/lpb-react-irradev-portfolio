@@ -93,6 +93,42 @@
    .fav-button-project {
       @apply flex justify-center items-center p-1 mr-1 mx-auto rounded-full shadow-md cursor-pointer hover:scale-125 transition-all duration-200 ease-out;
    }
+
+   .contact-form {
+      @apply flex flex-col justify-center items-center w-full gap-2;
+   }
+
+   .contact-form .title {
+      @apply text-secondary font-bold mt-2 mb-4
+   }
+   .contact-form .title > h2 {
+      @apply text-2xl;
+   }
+   .contact-form .title > span {
+      @apply text-sm italic;
+   }
+
+   .contact-form > fieldset {
+      @apply flex flex-col gap-2 font-medium w-full max-w-sm;
+   }
+   .contact-form .input-box {
+      @apply my-0;
+   }
+   .contact-form .input-box > label {
+      @apply text-amber-400 text-lg font-bold;
+   }
+   .contact-form .input-box>input, .contact-form .input-box>textarea {
+      @apply bg-stone-800 border border-teal-500 shadow-lg  w-full rounded-md mt-0.5 p-2.5 mb-1 focus:border-teal-300 focus:border-2 outline-none;
+   }
+   .contact-form .input-box>div {
+      @apply mb-1.5 transition-all duration-300 ease-out;
+   }
+   .contact-form .input-box>div>span {
+      @apply text-rose-400 text-sm font-bold ml-4 uppercase text-shadow-xs;
+   }
+   .contact-form > button[type="submit"] {
+      @apply flex justify-center items-center gap-4 bg-teal-600 hover:bg-teal-400 hover:text-gray-800 hover:scale-105 text-lg font-bold p-2 mt-2 w-full max-w-sm uppercase tracking-wide rounded-md shadow-lg transition-all duration-300 ease-out 
+   }
 }
 
 @layer utilities {
