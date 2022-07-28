@@ -25,18 +25,7 @@ export const ContactForm = () => {
       setIsSending(true);
       fetch('https://formsubmit.co/israeldevcorel@gmail.com', {
          method: 'POST',
-         body: `<table border="1">
-            <tr>
-               <td>NOMBRE:</td>
-               <td>${data.name}</td>
-            </tr>
-            <tr>
-               <td>EMAIL:</td>
-               <td>${data.email}</td>
-            </tr>
-            <tr><td colspan="2">MENSAJE:</td></tr>
-            <tr><td colspan="2">${data.message}</td></tr>
-         </table>`,
+         body: JSON.stringify(data),
       })
          .then((res) => {
             if (!res.ok) return Promise.reject(res);
