@@ -95,7 +95,7 @@
    }
 
    .contact-form {
-      @apply flex flex-col justify-center items-center w-full gap-2;
+      @apply flex flex-col justify-center items-center w-full gap-2 text-shadow-xs;
    }
 
    .contact-form .title {
@@ -124,10 +124,10 @@
       @apply mb-1.5 transition-all duration-300 ease-out;
    }
    .contact-form .input-box>div>span {
-      @apply text-rose-400 text-sm font-bold ml-4 uppercase text-shadow-xs;
+      @apply text-rose-400 text-sm font-bold ml-4 uppercase;
    }
    .contact-form > button[type="submit"] {
-      @apply flex justify-center items-center gap-4 bg-teal-600 hover:bg-teal-400 hover:text-gray-800 hover:scale-105 text-lg font-bold p-2 mt-2 w-full max-w-sm uppercase tracking-wide rounded-md shadow-lg transition-all duration-300 ease-out 
+      @apply flex justify-center items-center gap-4 bg-amber-600 hover:bg-amber-400 hover:text-gray-800 hover:scale-105 text-lg font-bold p-2 mt-2 w-full max-w-sm uppercase tracking-wide rounded-md shadow-lg text-shadow-xs transition-all duration-300 ease-out 
    }
 }
 

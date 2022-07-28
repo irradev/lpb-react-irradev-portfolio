@@ -1,13 +1,14 @@
-import { useState, useEffect } from 'react';
-
 import { BsGithub, BsLinkedin, BsTwitter, BsCodeSlash } from 'react-icons/bs';
 import { RiMenuUnfoldFill } from 'react-icons/ri';
 import { BiSend } from 'react-icons/bi';
 import { FiFolder } from 'react-icons/fi';
 
 import logo from '../assets/img/logo.png';
+import { useMySocialNetworks } from '../hooks/useMySocialNetworks';
 
 export const NavBar = () => {
+   const { allSocials } = useMySocialNetworks();
+
    return (
       <nav className="flex justify-center items-center px-1 w-full h-14  backdrop-blur-sm  fixed bottom-0 z-30 sm:sticky sm:top-0">
          <div className="flex justify-between items-center  sm:container w-full ">
@@ -64,15 +65,11 @@ export const NavBar = () => {
                   </a> */}
                </div>
                <div className="hidden md:flex gap-4 text-2xl ">
-                  <a href="https://github.com/irradev">
-                     <BsGithub />
-                  </a>
-                  <a href="https://www.linkedin.com/in/irradev/">
-                     <BsLinkedin />
-                  </a>
-                  <a href="https://twitter.com/irradev">
-                     <BsTwitter />
-                  </a>
+                  {allSocials.map((social) => (
+                     <a href={social.url} target="_blank">
+                        {social.icon}
+                     </a>
+                  ))}
                </div>
                <a
                   href="#contact"
