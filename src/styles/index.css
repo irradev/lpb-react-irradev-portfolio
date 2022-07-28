@@ -63,6 +63,10 @@
       posittion: relative;
    } */
 
+   .nav-link {
+      @apply flex flex-col justify-center items-center hover:text-teal-200 border border-transparent hover:border-b-white hover:pb-2 transition-all-300-eio;
+   }
+
    .card-project {
       @apply flex flex-col justify-start w-full max-w-xs bg-gradient-to-b from-teal-700 via-sky-700 to-teal-600 mx-auto rounded-md shadow-md hover:scale-105 transition-all duration-300 ease-out border-2 border-y-0 border-transparent hover:border-teal-400 relative;
    }
@@ -150,6 +154,10 @@
 
    .text-shadow-xs {
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+   }
+
+   .transition-all-300-eio {
+      @apply transition-all duration-300 ease-in-out;
    }
    /* .color-primary,
    .navbar.color-primary a {

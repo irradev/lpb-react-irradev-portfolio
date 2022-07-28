@@ -30,10 +30,7 @@ export const NavBar = () => {
             </div>
             <div className="flex-grow sm:flex-grow-0 flex justify-around items-center text-xs sm:gap-8 sm:text-lg">
                <div className="flex-grow justify-around gap-1 sm:flex-grow-0 flex sm:gap-4 font-medium sm:font-normal">
-                  <a
-                     href="#home"
-                     className="flex flex-col justify-center items-center"
-                  >
+                  <a href="#home" className="nav-link">
                      {/* <AiOutlineHome className="text-3xl sm:hidden" /> */}
                      <img
                         className="rounded-lg w-11  sm:hidden"
@@ -42,17 +39,11 @@ export const NavBar = () => {
                      />
                      <span className="hidden sm:inline">Home</span>
                   </a>
-                  <a
-                     href="#skills"
-                     className="flex flex-col justify-center items-center"
-                  >
+                  <a href="#skills" className="nav-link">
                      <BsCodeSlash className="text-3xl sm:hidden" />
                      <span>Skills</span>
                   </a>
-                  <a
-                     href="#projects"
-                     className="flex flex-col justify-center items-center"
-                  >
+                  <a href="#projects" className="nav-link">
                      <FiFolder className="text-3xl sm:hidden" />
                      <span>Proyectos</span>
                   </a>
@@ -66,14 +57,14 @@ export const NavBar = () => {
                </div>
                <div className="hidden md:flex gap-4 text-2xl ">
                   {allSocials.map((social) => (
-                     <a href={social.url} target="_blank">
+                     <a className="nav-link" href={social.url} target="_blank">
                         {social.icon}
                      </a>
                   ))}
                </div>
                <a
                   href="#contact"
-                  className="flex mxs:flex-col justify-center gap-1 items-center border-2 border-primary mr-3 px-3 py-2 mxs:mr-0 mxs:py-0 sm:mr-0 sm:flex-row sm:px-7 sm:py-2 sm:h-11 sm:uppercase sm:cursor-pointer "
+                  className="flex mxs:flex-col justify-center gap-1 items-center border-2 border-primary mr-3 px-3 py-2 mxs:mr-0 mxs:py-0 sm:mr-0 sm:flex-row sm:px-7 sm:py-2 sm:h-11 sm:uppercase sm:cursor-pointer hover:scale-110 hover:bg-amber-600   transition-all duration-200 ease-in-out"
                >
                   <BiSend className="text-2xl sm:hidden" />
                   <span className="mxs:text-xs text-base sm:text-lg font-medium">

@@ -41,7 +41,7 @@ export const Banner = () => {
                                  />{' '}
                               </div>
                            </h1>
-                           <p className="text-secondary text-lg sm:text-xl pb-0 pt-4  mxs:pt-3">
+                           <p className="text-secondary text-lg sm:text-xl pb-0 pt-4  mxs:pt-3 text-shadow-xs">
                               Del diseño a la funcionalidad. Transformo tus
                               ideas en aplicaciones web escalables con la
                               tecnología de ¡React!
