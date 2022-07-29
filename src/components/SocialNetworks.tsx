@@ -39,18 +39,19 @@ export const SocialNetworks = () => {
                      <div className="flex justify-evenly items-center w-full mt-1">
                         {allSocials.map((social, index) => (
                            <a
+                              key={index + '-' + social.name}
                               className={`
-                           flex flex-col justify-center items-center gap-1 
-                           mxs:text-4xl text-5xl my-2 
-                           ${
-                              isVisible
-                                 ? 'opacity-100 animate__animated animate__bounceIn '
-                                 : 'opacity-0'
-                           }
-                           hover:text-amber-400 
-                           mxs:hover:text-5xl hover:text-7xl transition-all duration-300 ease-out
-                           h-28 w-28
-                        `}
+                                 flex flex-col justify-center items-center gap-1 
+                                 mxs:text-4xl text-5xl my-2 
+                                 ${
+                                    isVisible
+                                       ? 'opacity-100 animate__animated animate__bounceIn '
+                                       : 'opacity-0'
+                                 }
+                                 hover:text-amber-400 
+                                 mxs:hover:text-5xl hover:text-7xl transition-all duration-300 ease-out
+                                 h-28 w-28
+                              `}
                               href={social.url}
                               target="_blank"
                               style={{
