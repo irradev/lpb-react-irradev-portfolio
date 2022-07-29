@@ -93,7 +93,7 @@ export const Skills = () => {
 
    return (
       <section
-         className="flex justify-center items-center h-screen relative"
+         className="flex justify-center items-center h-screen long-vertical:h-screen-60 relative "
          id="skills"
       >
          <div className="container mxs:pb-12 pb-10 pt-0 sm:pb-0 sm:pt-12">

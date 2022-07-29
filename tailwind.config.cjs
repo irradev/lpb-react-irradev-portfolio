@@ -6,6 +6,13 @@ module.exports = {
          screens: {
             mxs: { max: '320px' },
             mssm: { max: '460px' },
+            'long-vertical': {
+               raw: '(min-device-height: 1100px)',
+            },
+         },
+         height: {
+            'screen-80': '80vh',
+            'screen-60': '60vh',
          },
       },
    },
