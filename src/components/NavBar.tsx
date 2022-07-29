@@ -1,4 +1,11 @@
-import { ReactElement, useEffect, useState } from 'react';
+import {
+   AnchorHTMLAttributes,
+   MutableRefObject,
+   ReactElement,
+   useEffect,
+   useRef,
+   useState,
+} from 'react';
 import { useMySocialNetworks } from '../hooks/useMySocialNetworks';
 
 import { BsCodeSlash } from 'react-icons/bs';
@@ -46,10 +53,12 @@ export const NavBar = () => {
       logo: false,
       contact: false,
    };
+
    const [navLinks, setNavLinks] = useState<INavLink[]>(navLinksInit);
    const [isClickedOtherNavLinks, setIsClickedOtherNavLinks] = useState(
       otherNavLinksClickedInit
    );
+   const $navLinkElements = useRef<any[]>([]);
 
    const setActiveNavLink = (targetId: string) => {
       if (targetId === 'logo' || targetId === 'contact') {
@@ -71,10 +80,11 @@ export const NavBar = () => {
       );
    };
 
-   // useEffect(() => {
-   //    let hashLink = window.location.hash;
-   //    setActiveNavLink(hashLink);
-   // }, []);
+   useEffect(() => {
+      let hashLink = window.location.hash;
+      let $navLink = $navLinkElements.current[hashLink as any];
+      if ($navLink) $navLinkElements.current[hashLink as any].click();
+   }, []);
 
    return (
       <nav className="flex justify-center items-center px-1 w-full h-14  backdrop-blur-sm  fixed bottom-0 z-30 sm:sticky sm:top-0">
@@ -106,6 +116,10 @@ export const NavBar = () => {
                   {navLinks.map((navLink, index) => (
                      <a
                         key={index + '-' + navLink.name}
+                        ref={($el) =>
+                           ($navLinkElements.current![navLink.targetId as any] =
+                              $el)
+                        }
                         onClick={() => setActiveNavLink(navLink.targetId)}
                         href={navLink.targetId}
                         className={`
