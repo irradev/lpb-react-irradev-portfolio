@@ -14,7 +14,8 @@ export const FrontendProjects: IProject[] = [
    {
       id: 'irpo20137771',
       name: 'irradev Portfolio',
-      shortDescription: 'Portafolio para proyectos digitales.',
+      shortDescription:
+         'Mi Portafolio personal con diseño responsivo. Mínimo de ancho de 280px.',
       image: imgIrraDevPortfolio,
       technologies: ['React', 'Tailwind'],
       urlGitHub: 'https://github.com/irradev/lpb-react-portfolio',
