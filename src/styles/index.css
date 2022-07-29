@@ -64,9 +64,18 @@
    } */
 
    .nav-link {
-      @apply flex flex-col justify-center items-center hover:text-teal-200 border border-transparent hover:border-b-white hover:pb-2 transition-all-300-eio;
+      @apply flex flex-col justify-center items-center border border-transparent hover:nav-link-active transition-all-300-eio;
    }
-
+   .nav-link-active {
+      @apply text-teal-200 sm:border-b-white sm:pb-2
+   }
+   .nav-link-contact {
+      @apply flex mxs:flex-col justify-center gap-1 items-center border-2 mr-3 px-3 py-2 mxs:mr-0 mxs:py-0 sm:mr-0 sm:flex-row sm:px-7 sm:py-2 sm:h-11 sm:uppercase sm:cursor-pointer hover:nav-link-contact-active transition-all-300-eio;
+   }
+   .nav-link-contact-active {
+      @apply scale-110 bg-amber-600 border-transparent;
+   }
+   
    .card-project {
       @apply flex flex-col justify-start w-full max-w-xs bg-gradient-to-b from-teal-700 via-sky-700 to-teal-600 mx-auto rounded-md shadow-md hover:scale-105 transition-all duration-300 ease-out border-2 border-y-0 border-transparent hover:border-teal-400 relative;
    }
@@ -159,6 +168,7 @@
    .transition-all-300-eio {
       @apply transition-all duration-300 ease-in-out;
    }
+
    /* .color-primary,
    .navbar.color-primary a {
       color: var(--primary-color);
