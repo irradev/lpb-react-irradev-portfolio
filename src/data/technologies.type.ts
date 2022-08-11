@@ -4,6 +4,7 @@ export type TTechnologies =
    | 'NextJs'
    | 'Typescript'
    | 'Tailwind'
+   | 'StyledComponents'
    | 'Sergey'
    | 'NodeJs'
    | 'PHP'
