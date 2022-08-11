@@ -9,8 +9,20 @@ import imgViteTypescriptNotes from '../assets/img/projects/vite-typescript-notes
 import imgReactVirtualizedDataTables from '../assets/img/projects/react-virtualized-data-tables.png';
 import imgReactMessengerOld from '../assets/img/projects/react-messenger-old.png';
 import imgIrraDevPortfolio from '../assets/img/projects/irradev-portfolio.png';
+import imgReactChatForms from '../assets/img/projects/react-chat-forms.png';
 
 export const FrontendProjects: IProject[] = [
+   {
+      id: 'rechafo3948271',
+      name: 'React Chat Forms',
+      shortDescription: 'Aplicación de formularios estilo chat.',
+      image: imgReactChatForms,
+      technologies: ['React', 'StyledComponents'],
+      urlGitHub: 'https://github.com/irradev/prutec-chat-forms',
+      urlDemo: 'https://react-chat-forms.vercel.app/',
+      type: 'Frontend',
+      status: 'Terminado',
+   },
    {
       id: 'irpo20137771',
       name: 'irradev Portfolio',
