@@ -10,12 +10,26 @@ import imgReactVirtualizedDataTables from '../assets/img/projects/react-virtuali
 import imgReactMessengerOld from '../assets/img/projects/react-messenger-old.png';
 import imgIrraDevPortfolio from '../assets/img/projects/irradev-portfolio.png';
 import imgReactChatForms from '../assets/img/projects/react-chat-forms.png';
+import imgMemoryMatch from '../assets/img/projects/memory-match.png';
 
 export const FrontendProjects: IProject[] = [
    {
+      id: 'edmema731421',
+      name: 'Memory Match',
+      shortDescription:
+         'Juego Memorama educativo. Proyecto participante en el Hackaton Open Bootcamp - SEP 2022',
+      image: imgMemoryMatch,
+      technologies: ['React', 'Tailwind'],
+      urlGitHub: 'https://github.com/irradev/lpb-react-memory-match',
+      urlDemo: 'https://react-memory-match.vercel.app/',
+      type: 'Frontend',
+      status: 'Terminado',
+   },
+   {
       id: 'rechafo3948271',
       name: 'React Chat Forms',
-      shortDescription: 'Aplicación de formularios estilo chat.',
+      shortDescription:
+         'Aplicación de formularios estilo chat. Proyecto que se utilizó como prueba técnica para TheRocketCode.com',
       image: imgReactChatForms,
       technologies: ['React', 'StyledComponents'],
       urlGitHub: 'https://github.com/irradev/prutec-chat-forms',
