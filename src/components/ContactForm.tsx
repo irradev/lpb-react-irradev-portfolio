@@ -57,7 +57,7 @@ export const ContactForm = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
          <div className="title">
             <h2>Déjame tu mensaje</h2>
-            <span>Todos los campos son requqeridos</span>
+            <span>Todos los campos son requeridos</span>
          </div>
          <fieldset>
             <div className="input-box">
