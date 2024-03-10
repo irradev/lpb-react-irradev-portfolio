@@ -74,13 +74,7 @@ export const CardProject: FC<CardProjectProps> = ({
             key={'tag_' + index + name}
             className="z-10 absolute h-9 w-9 "
             style={{
-              left: `${
-                index === 0
-                  ? '8'
-                  : index === 1
-                  ? index * 48
-                  : index * 48 - 7 * index
-              }px`,
+              left: `${index === 0 ? '8' : index * 48 - 7 * (index - 1)}px`,
             }}
           >
             <div className="tag-technology-project">
