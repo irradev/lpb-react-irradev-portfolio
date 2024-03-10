@@ -18,7 +18,7 @@ export const FrontendProjects: IProject[] = [
     id: 'dazu731422',
     name: 'Dashboard Zustand',
     shortDescription:
-      'Práctica de Zustand. Un poderoso gestor de estado para React fácil de implementar.',
+      'Práctica de Zustand. Un poderoso gestor de estado para React y de fácil implementación.',
     image: imgZustandMini,
     technologies: ['React', 'Tailwind', 'Zustand', 'React Router'],
     urlGitHub: 'https://github.com/irradev/fh-zustand-mini',
