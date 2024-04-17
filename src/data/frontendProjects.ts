@@ -12,6 +12,7 @@ import imgIrraDevPortfolio from '../assets/img/projects/irradev-portfolio.png';
 import imgReactChatForms from '../assets/img/projects/react-chat-forms.png';
 import imgMemoryMatch from '../assets/img/projects/memory-match.png';
 import imgZustandMini from '../assets/img/projects/zustand-mini.png';
+import imgReactRouterV6 from '../assets/img/projects/react-router-v6.png';
 
 export const FrontendProjects: IProject[] = [
   {
@@ -94,6 +95,17 @@ export const FrontendProjects: IProject[] = [
     technologies: ['NextJs'],
     urlGitHub: 'https://github.com/irradev/next-pokemon-app',
     urlDemo: 'https://nextpokemonapp.vercel.app/',
+    type: 'Frontend',
+    status: 'Terminado',
+  },
+  {
+    id: 'rero731422',
+    name: 'React Router Dom v6',
+    shortDescription: 'Práctica con la nueva versión de React Router Dom.',
+    image: imgReactRouterV6,
+    technologies: ['React', 'React Router'],
+    urlGitHub: 'https://github.com/irradev/jm-react-router-6',
+    urlDemo: 'https://react-router-v6-cyan.vercel.app/',
     type: 'Frontend',
     status: 'Terminado',
   },
