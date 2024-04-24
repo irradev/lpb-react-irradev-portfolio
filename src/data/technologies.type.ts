@@ -14,4 +14,7 @@ export type TTechnologies =
   | 'SQLite'
   | 'MongoDB'
   | 'Zustand'
+  | 'Prisma'
+  | 'Zod'
+  | 'Postgresql'
   | 'React Router';

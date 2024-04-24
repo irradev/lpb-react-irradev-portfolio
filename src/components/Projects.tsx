@@ -15,7 +15,7 @@ export type TTabsState = TProject | 'Favorites';
 
 export const Projects = () => {
   //  const tabs: TProject[] = ['Frontend', 'Backend', 'Fullstack'];
-  const tabs: TProject[] = ['Frontend'];
+  const tabs: TProject[] = ['Frontend', 'Fullstack'];
   const [tabSelected, setTabSelected] = useState<TTabsState>('Frontend');
   const [projects, setProjects] = useState<IProject[]>([]);
   const [clickedFavorites, setClickedFavorites] = useState<{

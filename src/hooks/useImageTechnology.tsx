@@ -9,6 +9,9 @@ import {
   SiTypescript,
   SiStyledcomponents,
   SiReactrouter,
+  SiPrisma,
+  SiZod,
+  SiPostgresql,
 } from 'react-icons/si';
 import imgSergey from '../assets/img/technologies/sergey-32x32.png';
 import imgZustand from '../assets/img/technologies/zustand-logo_31x26.png';
@@ -29,6 +32,12 @@ export const useImageTechnology = (name: TTechnologies) => {
       return <SiStyledcomponents fontSize={20} />;
     case 'React Router':
       return <SiReactrouter fontSize={20} />;
+    case 'Prisma':
+      return <SiPrisma fontSize={20} />;
+    case 'Zod':
+      return <SiZod fontSize={20} />;
+    case 'Postgresql':
+      return <SiPostgresql fontSize={20} />;
     case 'Zustand':
       return (
         <img
