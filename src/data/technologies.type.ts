@@ -17,4 +17,8 @@ export type TTechnologies =
   | 'Prisma'
   | 'Zod'
   | 'Postgresql'
+  | 'Nuxt'
+  | 'SASS'
+  | 'Vuetify'
+  | 'Vue'
   | 'React Router';

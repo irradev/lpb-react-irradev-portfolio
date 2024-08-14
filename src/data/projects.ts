@@ -14,6 +14,7 @@ export interface IProject {
   technologies: TTechnologies[];
   urlGitHub?: string;
   urlDemo?: string;
+  urlGumroad?: string;
   type: TProject;
   status: TStatus;
 }

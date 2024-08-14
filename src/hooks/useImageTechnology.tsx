@@ -1,7 +1,6 @@
-import React, { FC } from 'react';
 import { TTechnologies } from '../data/technologies.type';
 
-import { FaReact } from 'react-icons/fa';
+import { FaReact, FaVuejs, FaSass } from 'react-icons/fa';
 import { TbBrandNextjs } from 'react-icons/tb';
 import {
   SiTailwindcss,
@@ -12,6 +11,8 @@ import {
   SiPrisma,
   SiZod,
   SiPostgresql,
+  SiNuxtdotjs,
+  SiVuetify,
 } from 'react-icons/si';
 import imgSergey from '../assets/img/technologies/sergey-32x32.png';
 import imgZustand from '../assets/img/technologies/zustand-logo_31x26.png';
@@ -38,6 +39,14 @@ export const useImageTechnology = (name: TTechnologies) => {
       return <SiZod fontSize={20} />;
     case 'Postgresql':
       return <SiPostgresql fontSize={20} />;
+    case 'Nuxt':
+      return <SiNuxtdotjs fontSize={20} />;
+    case 'Vue':
+      return <FaVuejs fontSize={20} />;
+    case 'Vuetify':
+      return <SiVuetify fontSize={20} />;
+    case 'SASS':
+      return <FaSass fontSize={20} />;
     case 'Zustand':
       return (
         <img

@@ -12,8 +12,21 @@ import imgReactChatForms from '../assets/img/projects/react-chat-forms.png';
 import imgMemoryMatch from '../assets/img/projects/memory-match.png';
 import imgZustandMini from '../assets/img/projects/zustand-mini.png';
 import imgReactRouterV6 from '../assets/img/projects/react-router-v6.png';
+import imgAnyDrive from '../assets/img/projects/any-drive-gum-road_COVER.png';
 
 export const FrontendProjects: IProject[] = [
+  {
+    id: 'andr731423',
+    name: 'AnyDrive - Web Template',
+    shortDescription:
+      'Plantilla web con temática de Cloud Service. Cuenta con página de Home, Contacto, Login y 404.',
+    image: imgAnyDrive,
+    technologies: ['Vue', 'Vuetify', 'Nuxt', 'SASS'],
+    urlGumroad: 'https://irradev.gumroad.com/l/web-template-any-drive',
+    urlDemo: 'https://anydrive.netlify.app/',
+    type: 'Frontend',
+    status: 'Terminado',
+  },
   {
     id: 'dazu731422',
     name: 'Dashboard Zustand',
