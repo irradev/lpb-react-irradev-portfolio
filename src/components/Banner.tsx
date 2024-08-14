@@ -21,7 +21,7 @@ export const Banner = () => {
       </span>
       <div className=" flex justify-center items-center sm:mt-14 ">
         <div className="grid grid-cols-1 md:grid-cols-2 w-full ">
-          <div className="flex items-center text-center md:text-left ">
+          <div className="flex items-center justify-center text-center md:text-left ">
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
@@ -44,7 +44,7 @@ export const Banner = () => {
               )}
             </TrackVisibility>
           </div>
-          <p className="text-secondary text-lg sm:text-xl pb-0 pt-4  mxs:pt-3 text-shadow-xs">
+          <p className="text-secondary text-lg sm:text-xl pb-0 pt-4  mxs:pt-3 text-shadow-xs mb-8 sm:mb-0">
             Del diseño a la funcionalidad. Transformo tus conceptos en
             aplicaciones web escalables utilizando las últimas tecnologías y
             mejores prácticas del desarrollo frontend.

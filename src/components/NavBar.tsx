@@ -35,12 +35,12 @@ export const NavBar = () => {
       targetId: '#home',
       isActive: false,
     },
-    {
-      name: 'Skills',
-      icon: <BsCodeSlash className="text-3xl sm:hidden" />,
-      targetId: '#skills',
-      isActive: false,
-    },
+    // {
+    //   name: 'Skills',
+    //   icon: <BsCodeSlash className="text-3xl sm:hidden" />,
+    //   targetId: '#skills',
+    //   isActive: false,
+    // },
     {
       name: 'Proyectos',
       icon: <FiFolder className="text-3xl sm:hidden" />,
