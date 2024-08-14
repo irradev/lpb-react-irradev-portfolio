@@ -114,7 +114,7 @@ export const Projects = () => {
 
   return (
     <section
-      className="flex justify-center items-center h-screen relative"
+      className="flex justify-center items-center  relative"
       id="projects"
     >
       <div className="container h-full pt-2 pb-16 sm:pt-6 sm:pb-16 md:pt-16 md:pb-4">
@@ -200,7 +200,7 @@ export const Projects = () => {
               <div
                 className={`
                            flex-grow 
-                           ${projects.length > 0 ? 'overflow-y-scroll' : ''} 
+                           ${projects.length > 0 ? 'overflow-y-auto' : ''} 
                            overflow-x-hidden 
                            mt-4 sm:mt-0
                            rounded-md

@@ -6,16 +6,16 @@ import { Contact } from '../components/Contact';
 import { Footer } from '../components/Footer';
 
 export const MainLayout = () => {
-   return (
-      <div className="static h-full bg-stone-800 bg-gradient-to-b from-teal-900 via-teal-700 to-teal-900">
-         <div className="relative w-full ">
-            <NavBar />
-            <Banner />
-            <Skills />
-            <Projects />
-            <Contact />
-            <Footer />
-         </div>
+  return (
+    <div className="static h-full bg-stone-800 bg-gradient-to-b from-teal-900 via-teal-700 to-teal-900">
+      <div className="relative w-full ">
+        <NavBar />
+        <Banner />
+        {/* <Skills /> */}
+        <Projects />
+        <Contact />
+        <Footer />
       </div>
-   );
+    </div>
+  );
 };

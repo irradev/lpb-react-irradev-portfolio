@@ -13,12 +13,15 @@ export const Banner = () => {
 
   return (
     <section
-      className="banner "
+      className="container banner "
       id="home"
     >
-      <div className="container flex justify-center items-center  ">
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full">
-          <div className="flex items-center text-center md:text-left">
+      <span className="text-6xl sm:text-9xl w-full text-center sm:mt-7 pt-4 block">
+        ¡Hola!
+      </span>
+      <div className=" flex justify-center items-center sm:mt-14 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full ">
+          <div className="flex items-center text-center md:text-left ">
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
@@ -27,7 +30,6 @@ export const Banner = () => {
                   }
                 >
                   <h1 className="flex justify-center flex-col gap-4 font-bold mt-8 sm:mt-0 ">
-                    <span className="text-3xl sm:text-4xl">¡Hola!</span>
                     <span className="text-4xl mxs:text-2xl sm:text-5xl">
                       Soy Israel Vázquez
                     </span>
@@ -38,22 +40,22 @@ export const Banner = () => {
                       />{' '}
                     </div>
                   </h1>
-                  <p className="text-secondary text-lg sm:text-xl pb-0 pt-4  mxs:pt-3 text-shadow-xs">
-                    Del diseño a la funcionalidad. Transformo tus conceptos en
-                    aplicaciones web escalables utilizando las últimas
-                    tecnologías y mejores prácticas del desarrollo frontend.
-                  </p>
                 </div>
               )}
             </TrackVisibility>
           </div>
-          <div className="mx-auto md:mr-0 w-full max-w-xs md:max-w-md">
+          <p className="text-secondary text-lg sm:text-xl pb-0 pt-4  mxs:pt-3 text-shadow-xs">
+            Del diseño a la funcionalidad. Transformo tus conceptos en
+            aplicaciones web escalables utilizando las últimas tecnologías y
+            mejores prácticas del desarrollo frontend.
+          </p>
+          {/* <div className="mx-auto md:mr-0 w-full max-w-xs md:max-w-md">
             <img
               className="updown-animation"
               src={graphic}
               alt="Code Exploring Graphic"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

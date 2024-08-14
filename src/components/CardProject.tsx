@@ -7,6 +7,7 @@ import { TagStatusProject } from './TagStatusProject';
 
 import { FiGithub, FiLink } from 'react-icons/fi';
 import { MdFavorite, MdFavoriteBorder } from 'react-icons/md';
+import { TbBrandGumroad } from 'react-icons/tb';
 
 import { IProject } from '../data/projects';
 
@@ -116,6 +117,16 @@ export const CardProject: FC<CardProjectProps> = ({
                   >
                     <FiGithub fontSize={18} />
                     <span>github</span>
+                  </a>
+                )}
+                {project.urlGumroad && (
+                  <a
+                    href={project.urlGumroad}
+                    target="_blank"
+                    className="btn-card-project text-black bg-fuchsia-400 hover:text-fuchsia-400 hover:bg-gray-100 "
+                  >
+                    <TbBrandGumroad fontSize={18} />
+                    <span>shop</span>
                   </a>
                 )}
                 <a
