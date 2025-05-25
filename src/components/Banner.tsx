@@ -45,9 +45,7 @@ export const Banner = () => {
             </TrackVisibility>
           </div>
           <p className="text-secondary text-lg sm:text-xl pb-0 pt-4  mxs:pt-3 text-shadow-xs mb-8 sm:mb-0">
-            Del diseño a la funcionalidad. Transformo tus conceptos en
-            aplicaciones web escalables utilizando las últimas tecnologías y
-            mejores prácticas del desarrollo frontend.
+            Welcome! I'm irraDev, a passionate developer crafting intuitive frontend experiences and robust fullstack solutions. From engaging web templates and educational games to e-commerce platforms and dynamic UI/UX proposals, I leverage technologies like React, Next.js, Vue, and Tailwind CSS to bring ideas to life. Explore my projects to see innovation in action.
           </p>
           {/* <div className="mx-auto md:mr-0 w-full max-w-xs md:max-w-md">
             <img
