@@ -30,8 +30,6 @@ interface INavLink {
 }
 
 export const NavBar = () => {
-  const { allSocials } = useMySocialNetworks();
-
   const location = useLocation(); // Add useLocation hook
   const { allSocials } = useMySocialNetworks();
 
