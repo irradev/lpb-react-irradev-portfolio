@@ -7,8 +7,15 @@ const WhatIsMyViewportPage = lazy(
    () => import('./pages/WhatIsMyViewportPage')
 );
 
-// Note: The main page content (Banner, Projects, etc.) which was previously part of MainLayout
-// will be re-integrated via a dedicated HomePage component rendered at the "/" path in a future step.
+// Lazily import HomePage
+const HomePage = lazy(() => import('./pages/HomePage'));
+
+// Lazily import ProjectsPage
+const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
+
+// Lazily import ContactPage
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+
 // MainLayout now contains <Outlet /> and renders page-specific components passed by the router.
 
 function App() {
@@ -23,12 +30,12 @@ function App() {
                      path="/what-is-my-viewport"
                      element={<WhatIsMyViewportPage />}
                   />
-                  {/* 
-                    Route for the main page content. 
-                    This will render a placeholder until HomePage.tsx is created and used.
-                    The components (Banner, Projects, etc.) previously in MainLayout will go into HomePage.
-                  */}
-                  <Route path="/" element={<div>Home Page (Content like Banner, Projects, Skills, Contact to be added here via HomePage.tsx)</div>} />
+                  {/* Route for the main page content, now rendering HomePage */}
+                  <Route path="/" element={<HomePage />} />
+                  {/* Route for the Projects page */}
+                  <Route path="/projects" element={<ProjectsPage />} />
+                  {/* Route for the Contact page */}
+                  <Route path="/contact" element={<ContactPage />} />
                   {/* Other routes intended to be within MainLayout would be added here,
                       e.g., <Route path="/about" element={<AboutPage />} /> */}
                </Route>
