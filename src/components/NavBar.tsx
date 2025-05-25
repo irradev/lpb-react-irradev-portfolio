@@ -153,7 +153,7 @@ export const NavBar = () => {
                      alt="irradev logo"
                   /> */}
             <span>irradev</span>
-          </a>
+          </Link>
         </div>
         <div className="flex-grow sm:flex-grow-0 flex justify-around items-center text-xs sm:gap-8 sm:text-lg">
           <div className="flex-grow justify-around gap-1 sm:flex-grow-0 flex sm:gap-4 font-medium sm:font-normal">
