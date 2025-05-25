@@ -8,33 +8,33 @@ interface SeparateByStatus {
 }
 
 export const orderProjectByStatus = (array: IProject[]): IProject[] => {
-   const orderBy: TStatus[] = [
-      'Actualizado',
-      'Terminado',
-      'Desarrollando',
-      'Antiguo',
-   ];
-
-   let separateByStatus: SeparateByStatus = {
+   const separateByStatus: SeparateByStatus = {
       Actualizado: [],
       Terminado: [],
       Desarrollando: [],
       Antiguo: [],
    };
 
-   return array.reduce((tempArr, currentItem, currentIndex, originalArray) => {
-      for (const iterator of orderBy) {
-         if (iterator === currentItem.status) {
-            separateByStatus[iterator].push(currentItem);
-         }
+   for (const project of array) {
+      // Ensure that project.status is a valid key for separateByStatus
+      if (project.status in separateByStatus) {
+         separateByStatus[project.status].push(project);
       }
-      let toReturn: IProject[] = [];
+      // Optionally, handle cases where status might not be one of the predefined keys,
+      // though TStatus should enforce this. For now, we assume valid status.
+   }
 
-      if (currentIndex >= originalArray.length - 1) {
-         for (const iterator of orderBy) {
-            toReturn.push(...separateByStatus[iterator]);
-         }
-      }
-      return toReturn;
-   }, array);
+   const statusOrder: TStatus[] = [
+      'Actualizado',
+      'Terminado',
+      'Desarrollando',
+      'Antiguo',
+   ];
+
+   const result: IProject[] = [];
+   for (const status of statusOrder) {
+      result.push(...separateByStatus[status]);
+   }
+
+   return result;
 };
