@@ -13,6 +13,7 @@ import { RiMenuUnfoldFill } from 'react-icons/ri';
 import { BiSend } from 'react-icons/bi';
 import { FiFolder } from 'react-icons/fi';
 import { AiOutlineHome } from 'react-icons/ai';
+import { Link } from 'react-router-dom'; // Import Link
 
 import logo from '../assets/img/logo.png';
 
@@ -137,6 +138,21 @@ export const NavBar = () => {
                 <span className="sm:inline">{navLink.name}</span>
               </a>
             ))}
+            {/* New Link for Viewport Info Page */}
+            <Link
+              to="/what-is-my-viewport"
+              className="nav-link flex flex-col justify-center items-center sm:flex-row sm:gap-1" // Mimic nav-link styling and structure
+              onClick={() => {
+                // Clear hash-based active states when navigating to a new page
+                setIsClickedOtherNavLinks(otherNavLinksClickedInit);
+                setNavLinks((prevNavLinks) =>
+                  prevNavLinks.map((nl) => ({ ...nl, isActive: false }))
+                );
+              }}
+            >
+              <BsCodeSlash className="text-3xl sm:hidden" /> {/* Using BsCodeSlash as an example icon */}
+              <span className="sm:inline">Viewport</span>
+            </Link>
           </div>
           <div className="hidden md:flex gap-4 text-2xl ">
             {allSocials.map((social, index) => (
