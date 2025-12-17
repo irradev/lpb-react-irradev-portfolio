@@ -15,11 +15,12 @@ import imgReactRouterV6 from '../assets/img/projects/react-router-v6.png';
 import imgAnyDrive from '../assets/img/projects/any-drive-gum-road_COVER.png';
 
 export const FrontendProjects: IProject[] = [
+
   {
     id: 'andr731423',
     name: 'AnyDrive - Web Template',
     shortDescription:
-      'Plantilla web con temática de Cloud Service. Cuenta con página de Home, Contacto, Login y 404.',
+      'Plantilla web con temática de Cloud Service. Incluye páginas clave (Home, Contacto, Login y 404) y enfoque en diseño responsivo y UI consistente.',
     image: imgAnyDrive,
     technologies: ['Vue', 'Vuetify', 'Nuxt', 'SASS'],
     urlGumroad: 'https://irradev.gumroad.com/l/web-template-any-drive',
@@ -31,7 +32,7 @@ export const FrontendProjects: IProject[] = [
     id: 'dazu731422',
     name: 'Dashboard Zustand',
     shortDescription:
-      'Práctica de Zustand. Un poderoso gestor de estado para React y de fácil implementación.',
+      'Dashboard desarrollado en React como práctica de manejo de estado global usando Zustand, enfocado en simplicidad y escalabilidad.',
     image: imgZustandMini,
     technologies: ['React', 'Tailwind', 'Zustand', 'React Router'],
     urlGitHub: 'https://github.com/irradev/fh-zustand-mini',
@@ -43,7 +44,7 @@ export const FrontendProjects: IProject[] = [
     id: 'edmema731421',
     name: 'Memory Match',
     shortDescription:
-      'Juego Memorama educativo. Proyecto participante en el Hackaton Open Bootcamp - SEP 2022',
+      'Juego de memorama desarrollado en React, enfocado en lógica de estado, componentes reutilizables y experiencia de usuario.',
     image: imgMemoryMatch,
     technologies: ['React', 'Tailwind'],
     urlGitHub: 'https://github.com/irradev/lpb-react-memory-match',
@@ -55,7 +56,7 @@ export const FrontendProjects: IProject[] = [
     id: 'rechafo3948271',
     name: 'React Chat Forms',
     shortDescription:
-      'Aplicación de formularios estilo chat. Proyecto que se utilizó como prueba técnica para TheRocketCode.com',
+      'Aplicación de formularios con interacción tipo chat, desarrollada como prueba técnica, enfocada en UX, flujo conversacional y manejo de estado.',
     image: imgReactChatForms,
     technologies: ['React', 'StyledComponents'],
     urlGitHub: 'https://github.com/irradev/prutec-chat-forms',
@@ -67,7 +68,7 @@ export const FrontendProjects: IProject[] = [
     id: 'irpo20137771',
     name: 'irradev Portfolio',
     shortDescription:
-      'Portafolio personal con diseño responsivo. Mínimo de ancho de 280px.',
+      'Portafolio personal desarrollado en React, con diseño totalmente responsivo y enfoque en claridad visual y estructura de componentes.  Mínimo de ancho de 280px.',
     image: imgIrraDevPortfolio,
     technologies: ['React', 'Tailwind'],
     urlGitHub: 'https://github.com/irradev/lpb-react-portfolio',
@@ -78,19 +79,19 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'ofreap132',
     name: 'OfferJobs Responsive App',
-    shortDescription: 'Aplicación para Ofertas de Trabajo.',
+    shortDescription: 'Proyecto Frontend en React enfocado en la implementación de Redux para manejo de estado y diseño responsivo.',
     image: imgOfferJobsApp,
     technologies: ['React', 'Redux'],
     urlGitHub: 'https://github.com/irradev/lpb-react-offerjobs',
     urlDemo: 'http://react-offerjobs-responsive-app.vercel.app/',
     type: 'Frontend',
-    status: 'Desarrollando',
+    status: 'Antiguo',
   },
   {
     id: 'mouiuxro134',
     name: 'Modal UI/UX RoutePath',
     shortDescription:
-      'Propuesta UI/UX sobre el componente Hoja de Ruta para OpenBootcamp.',
+      'Propuesta UI/UX aplicada en React para mejorar la experiencia móvil del componente “Hoja de Ruta”, documentando el análisis y resolución de problemas de navegación y scroll.',
     image: imgModalUiUx,
     technologies: ['React', 'Tailwind'],
     urlGitHub:
@@ -102,7 +103,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'poapp1482',
     name: 'Pokemon App',
-    shortDescription: 'Listado de Pokémons con Funcionalidad de Favoritos.',
+    shortDescription: 'Aplicación en Next.js para listado de Pokémon, con manejo de favoritos y enfoque en renderizado eficiente y navegación.',
     image: imgPokemonApp,
     technologies: ['NextJs'],
     urlGitHub: 'https://github.com/irradev/next-pokemon-app',
@@ -113,7 +114,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'rero731422',
     name: 'React Router Dom v6',
-    shortDescription: 'Práctica con la nueva versión de React Router Dom.',
+    shortDescription: 'Práctica de enrutamiento y navegación en React usando React Router Dom v6.',
     image: imgReactRouterV6,
     technologies: ['React', 'React Router'],
     urlGitHub: 'https://github.com/irradev/jm-react-router-6',
@@ -124,7 +125,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'depo14022',
     name: 'DevCorel Portfolio',
-    shortDescription: 'Practicando darkMode y la propiedad clipath de css.',
+    shortDescription: 'Práctica de dark mode y efectos visuales usando clip-path en CSS.',
     image: imgDevCorelPortfolio,
     technologies: ['Sergey'],
     urlGitHub: 'https://github.com/irradev/devcorel-portfolio',
@@ -135,7 +136,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'tyno20192',
     name: 'Typescript Notes',
-    shortDescription: 'Practica de Vite + Typescript + Tailwind.',
+    shortDescription: 'Aplicación de notas desarrollada con Vite, TypeScript y Tailwind, enfocada en tipado estricto, estructura de componentes y UI ligera.',
     image: imgViteTypescriptNotes,
     technologies: ['Typescript', 'Tailwind'],
     urlGitHub: 'https://github.com/irradev/vite-typescript-tasknotes',
@@ -147,18 +148,18 @@ export const FrontendProjects: IProject[] = [
     id: 'revida39248',
     name: 'React Virtualized DataTables',
     shortDescription:
-      'Renderiza grandes cantidades de componentes sin perder perfomance.',
+      'Implementación de tablas virtualizadas en React para renderizar grandes volúmenes de datos optimizando rendimiento y consumo de recursos.',
     image: imgReactVirtualizedDataTables,
     technologies: ['React', 'Typescript'],
     urlDemo: 'https://react-virtualized-data-tables.vercel.app/',
     type: 'Frontend',
-    status: 'Desarrollando',
+    status: 'Antiguo',
   },
   {
     id: 'remere0138482',
     name: 'React Messenger Responsive',
     shortDescription:
-      'Deprecated Version. Practiacando UI Slides con diferentes media querys css.',
+      'Proyecto Frontend experimental enfocado en UI responsiva, implementando slides y layouts adaptativos mediante media queries en CSS.',
     image: imgReactMessengerOld,
     technologies: ['React', 'Tailwind'],
     urlDemo: 'https://react-messenger-responsive.vercel.app/',
