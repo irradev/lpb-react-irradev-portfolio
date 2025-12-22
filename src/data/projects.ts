@@ -5,6 +5,7 @@ import { FullstackProjects } from './fullstackProjects';
 
 export type TProject = 'Frontend' | 'Backend' | 'Fullstack';
 export type TStatus = 'Desarrollando' | 'Terminado' | 'Actualizado' | 'Antiguo';
+export type TUiSize = 'large' | 'medium' | 'small';
 
 export interface IProject {
   id: string;
@@ -17,6 +18,7 @@ export interface IProject {
   urlGumroad?: string;
   type: TProject;
   status: TStatus;
+  uiSize?: TUiSize;
 }
 
 export const projects: IProject[] = [

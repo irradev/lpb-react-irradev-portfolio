@@ -83,12 +83,37 @@
       @apply flex flex-col justify-start w-full max-w-xs bg-gradient-to-b from-teal-700 via-sky-700 to-teal-600 mx-auto rounded-md shadow-md hover:scale-105 transition-all duration-300 ease-out border-2 border-y-0 border-transparent hover:border-teal-400 relative;
    }
 
+   .project-bento-item {
+      @apply flex flex-col justify-start w-full mx-auto rounded-lg shadow-md h-full border border-teal-600/20 transition-all duration-300 ease-out relative;
+
+   }
+
    .image-card-project {
       @apply flex-shrink-0 h-40 rounded-t-md relative;
    }
 
+   .image-project-bento-item {
+      @apply flex-shrink-0 h-full rounded relative;
+   }
+
+   .project-bento-item img {
+      @apply rounded-lg;
+   }
+
+   .project-bento-item:hover img {
+      @apply scale-110 transition-all duration-[800ms] ease-out rounded-lg;
+   }
+
    .body-card-project {
       @apply flex-grow flex flex-col p-2;
+   }
+
+   .body-project-bento-item {
+      @apply flex-grow flex flex-col p-2 absolute bottom-0 left-0 right-0 z-20;
+   }
+
+   .body-project-bento-item-mask-gradient {
+      @apply absolute bottom-0 left-0 right-0 z-10 h-52 bg-gradient-to-b from-transparent to-black rounded-lg;
    }
 
    .btn-card-project {

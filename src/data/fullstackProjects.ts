@@ -20,5 +20,6 @@ export const FullstackProjects: IProject[] = [
     urlDemo: 'https://fh-nextjs-teslo-shop.vercel.app/',
     type: 'Fullstack',
     status: 'Terminado',
+    uiSize: 'large',
   },
 ];

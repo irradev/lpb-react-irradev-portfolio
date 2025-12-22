@@ -11,6 +11,7 @@ import { projects as dataProjects, IProject, TProject } from '../data/projects';
 
 import 'animate.css';
 import { SectionTitle } from './ui/SectionTitle';
+import { ProjectBentoItem } from './ProjectBentoItem';
 
 export type TTabsState = TProject | 'Favorites';
 
@@ -86,9 +87,9 @@ export const Projects = () => {
   const listProjects = useMemo(
     () => (
       <>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-5 rounded-md md:max-w-2xl md:mx-auto lg:max-w-none">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-5 auto-rows-[240px] md:mx-auto">
           {projects.map((project, index) => (
-            <CardProject
+            <ProjectBentoItem
               key={project.id}
               index={index + 1}
               project={project}

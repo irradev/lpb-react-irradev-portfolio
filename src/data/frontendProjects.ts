@@ -33,6 +33,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://irradev.github.io/fh-flutter-cinemapedia/home',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'large',
   },
   {
     id: 'vueawp731429',
@@ -45,6 +46,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://alegraworldpics.netlify.app/',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'medium',
   },
   {
     id: 'htmltc731428',
@@ -57,6 +59,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://tu-conta-en-linea.netlify.app/',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'small',
   },
   {
     id: 'serxv731427',
@@ -69,6 +72,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://lpb-plantilla-invitacion-xv.vercel.app/',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'small',
   },
   {
     id: 'vupok731426',
@@ -81,6 +85,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://vue-pokemon-game-irdv.vercel.app/',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'small',
   },
   {
     id: 'vuiapp731425',
@@ -93,6 +98,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://fh-vue-03-indecision-app.vercel.app/',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'small',
   },
   {
     id: 'vueram731424',
@@ -105,6 +111,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://fh-vue-rick-and-morty.vercel.app/',
     type: 'Frontend',
     status: 'Desarrollando',
+    uiSize: 'medium',
   },
   {
     id: 'andr731423',
@@ -117,6 +124,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://anydrive.netlify.app/',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'large',
   },
   {
     id: 'dazu731422',
@@ -129,6 +137,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://fh-zustand-mini-yiry.vercel.app/',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'small',
   },
   {
     id: 'edmema731421',
@@ -141,6 +150,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://react-memory-match.vercel.app/',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'small',
   },
   {
     id: 'rechafo3948271',
@@ -153,6 +163,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://react-chat-forms.vercel.app/',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'large',
   },
   {
     id: 'irpo20137771',
@@ -165,17 +176,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://irradev-portfolio.vercel.app/',
     type: 'Frontend',
     status: 'Terminado',
-  },
-  {
-    id: 'ofreap132',
-    name: 'OfferJobs Responsive App',
-    shortDescription: 'Proyecto Frontend en React enfocado en la implementación de Redux para manejo de estado y diseño responsivo.',
-    image: imgOfferJobsApp,
-    technologies: ['React', 'Redux'],
-    urlGitHub: 'https://github.com/irradev/lpb-react-offerjobs',
-    urlDemo: 'http://react-offerjobs-responsive-app.vercel.app/',
-    type: 'Frontend',
-    status: 'Antiguo',
+    uiSize: 'medium',
   },
   {
     id: 'mouiuxro134',
@@ -189,6 +190,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'http://ui-modal-hoja-de-ruta.vercel.app/',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'large',
   },
   {
     id: 'poapp1482',
@@ -200,6 +202,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://nextpokemonapp.vercel.app/',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'small',
   },
   {
     id: 'rero731422',
@@ -211,6 +214,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://react-router-v6-cyan.vercel.app/',
     type: 'Frontend',
     status: 'Terminado',
+    uiSize: 'small',
   },
   {
     id: 'depo14022',
@@ -222,6 +226,19 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://devcorel-portfolio.vercel.app/',
     type: 'Frontend',
     status: 'Antiguo',
+    uiSize: 'large',
+  },
+  {
+    id: 'ofreap132',
+    name: 'OfferJobs Responsive App',
+    shortDescription: 'Proyecto Frontend en React enfocado en la implementación de Redux para manejo de estado y diseño responsivo.',
+    image: imgOfferJobsApp,
+    technologies: ['React', 'Redux'],
+    urlGitHub: 'https://github.com/irradev/lpb-react-offerjobs',
+    urlDemo: 'http://react-offerjobs-responsive-app.vercel.app/',
+    type: 'Frontend',
+    status: 'Antiguo',
+    uiSize: 'medium',
   },
   {
     id: 'tyno20192',
@@ -244,6 +261,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://react-virtualized-data-tables.vercel.app/',
     type: 'Frontend',
     status: 'Antiguo',
+    uiSize: 'small',
   },
   {
     id: 'remere0138482',
@@ -255,5 +273,6 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://react-messenger-responsive.vercel.app/',
     type: 'Frontend',
     status: 'Antiguo',
+    uiSize: 'small',
   },
 ];
