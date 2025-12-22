@@ -42,7 +42,7 @@ export const TagStatusProject: FC<TagStatusProjectProps> = ({ status }) => {
             uppercase
             tracking-wide
             rounded-sm
-            absolute bottom-1 right-2
+            absolute bottom-10 right-2
             text-shadow-xs
             shadow-md
          `}
@@ -50,8 +50,8 @@ export const TagStatusProject: FC<TagStatusProjectProps> = ({ status }) => {
          {status === 'Desarrollando'
             ? 'En desarrollo...'
             : status === 'Antiguo'
-            ? '...Old'
-            : status}
+               ? '...Old'
+               : status}
       </span>
    );
 };

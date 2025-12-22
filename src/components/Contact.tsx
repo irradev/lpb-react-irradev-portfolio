@@ -6,7 +6,7 @@ import { SectionTitle } from './ui/SectionTitle';
 export const Contact = () => {
   return (
     <div
-      className="bg-slate-800 mt-8"
+      className="mt-8"
       id="contact"
     >
       <div className="container pt-6 pb-16 md:pb-8">
