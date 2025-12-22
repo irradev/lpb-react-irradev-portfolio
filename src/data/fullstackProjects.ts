@@ -10,12 +10,12 @@ export const FullstackProjects: IProject[] = [
     image: imgTesloShop,
     technologies: [
       'NextJs',
-      'Tailwind',
       'Zustand',
       'Prisma',
       'Postgresql',
       'Zod',
     ],
+    tags: ['Fullstack', 'NextJs', 'Tailwind', 'Zustand', 'Prisma', 'Postgresql', 'Zod'],
     urlGitHub: 'https://github.com/irradev/fh-nextjs-teslo-shop',
     urlDemo: 'https://fh-nextjs-teslo-shop.vercel.app/',
     type: 'Fullstack',

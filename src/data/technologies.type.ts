@@ -1,6 +1,6 @@
 export type TTechnologies =
   | 'HTML'
-  | 'JavaScript'
+  | 'Javascript'
   | 'CSS'
   | 'React'
   | 'Redux'

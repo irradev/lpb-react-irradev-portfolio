@@ -50,6 +50,10 @@ export const ProjectBentoItem: FC<ProjectBentoItemProps> = ({
       clicks: prev.clicks + 1, // ? this is just for listening changes in state
       isAdded: existInFavorites(id),
     }));
+
+    if (isInFavorites && tabSelected === 'Favorites') {
+      quitFromFavorites();
+    }
   };
 
   // ? I think this implementation is not the correct way...
@@ -62,14 +66,20 @@ export const ProjectBentoItem: FC<ProjectBentoItemProps> = ({
     }, 700);
   };
 
+
   return (
     <div
       ref={$cardProject}
-      className={`${tabSelected === 'Favorites'
-        ? isInFavorites
-          ? 'animate__animated animate__fadeInDown animate__faster'
-          : `animate__animated animate__fadeOutUp animate__faster ${quitFromFavorites()}`
-        : `${sizeClasses[size]}`
+      className={`
+        animate__animated animate__fadeInDown animate__faster
+        
+        ${tabSelected === 'Favorites'
+          ? isInFavorites
+            ? ''
+            : `animate__animated animate__fadeOutUp animate__faster`
+          : tabSelected === 'ALL'
+            ? `${sizeClasses[size]}`
+            : ``
         } `}
       style={{
         animationDelay: `${index / 14}s`,

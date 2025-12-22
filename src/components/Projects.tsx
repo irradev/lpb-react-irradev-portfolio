@@ -12,13 +12,16 @@ import { projects as dataProjects, IProject, TProject } from '../data/projects';
 import 'animate.css';
 import { SectionTitle } from './ui/SectionTitle';
 import { ProjectBentoItem } from './ProjectBentoItem';
+import { FilterIconButton } from './FilterIconButton';
+import { TTechnologies } from '../data/technologies.type';
+import { TFilterTechnologies } from '../data/filterTechnologies.type';
 
-export type TTabsState = TProject | 'Favorites';
+export type TTabsState = TFilterTechnologies | 'Favorites' | 'ALL';
 
 export const Projects = () => {
   //  const tabs: TProject[] = ['Frontend', 'Backend', 'Fullstack'];
-  const tabs: TProject[] = ['Frontend', 'Fullstack'];
-  const [tabSelected, setTabSelected] = useState<TTabsState>('Frontend');
+  const tabs: TFilterTechnologies[] = ['HTML', 'Javascript', 'Typescript', 'Sergey', 'React', 'Vue', 'NextJs', 'Nuxt', 'Flutter'];
+  const [tabSelected, setTabSelected] = useState<TTabsState>('ALL');
   const [projects, setProjects] = useState<IProject[]>([]);
   const [clickedFavorites, setClickedFavorites] = useState<{
     clicks: number;
@@ -31,8 +34,16 @@ export const Projects = () => {
   const $favButton = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
-    if (tabSelected !== 'Favorites') {
-      setProjects(dataProjects.filter((p) => p.type === tabSelected));
+    if (tabSelected !== 'Favorites' && tabSelected !== 'ALL') {
+      setProjects(dataProjects.filter((p) => p.tags.includes(tabSelected)));
+    } else if (tabSelected === 'Favorites') {
+      setProjects(
+        dataProjects.filter((project) =>
+          favoriteProjects().some((favId) => favId === project.id)
+        )
+      );
+    } else {
+      setProjects(dataProjects);
     }
   }, [tabSelected]);
 
@@ -44,33 +55,26 @@ export const Projects = () => {
         $favButton.current!.style.animationDelay = '0s';
       }, 50);
     } else if (clickedFavorites.clicks > 0 && favoriteProjects().length === 0) {
-      onSelectTab('Frontend', 0);
+      onSelectTab('ALL', 0);
     }
   }, [clickedFavorites]);
 
-  const onSelectTab = (tab: TProject, index: number) => {
+  const onSelectTab = (tab: TTabsState, index: number) => {
     if (tab === tabSelected) return;
 
-    $containerProjects.current?.classList.remove('animate__fadeInLeft');
-    $containerProjects.current?.classList.remove('animate__fadeInRight');
+    // $containerProjects.current?.classList.remove('animate__fadeInLeft');
+    // $containerProjects.current?.classList.remove('animate__fadeInRight');
     $containerProjects.current?.classList.add('hidden');
     if (tabSelected === 'Favorites') {
       setTimeout(() => {
         $containerProjects.current?.classList.remove('hidden');
-        $containerProjects.current?.classList.add('animate__fadeInLeft');
+      }, 50);
+    } else if (tabSelected === 'ALL') {
+      setTimeout(() => {
+        $containerProjects.current?.classList.remove('hidden');
       }, 50);
     } else {
-      if (index > tabs.indexOf(tabSelected)) {
-        setTimeout(() => {
-          $containerProjects.current?.classList.remove('hidden');
-          $containerProjects.current?.classList.add('animate__fadeInRight');
-        }, 50);
-      } else if (index < tabs.indexOf(tabSelected)) {
-        setTimeout(() => {
-          $containerProjects.current?.classList.remove('hidden');
-          $containerProjects.current?.classList.add('animate__fadeInLeft');
-        }, 50);
-      }
+      $containerProjects.current?.classList.remove('hidden');
     }
     setTabSelected(tab);
   };
@@ -116,13 +120,13 @@ export const Projects = () => {
 
   return (
     <section
-      className="flex justify-center items-center  relative"
+      className="flex justify-center items-center relative"
       id="projects"
     >
       <div className="container h-full pt-2 pb-16 sm:pt-6 sm:pb-16 md:pt-16 md:pb-4">
         <SectionTitle title="Proyectos" />
         <SectionCard className="h-full  relative">
-          <div className=" h-full w-full relative">
+          <div className="h-full w-full relative">
 
             <div className=" flex flex-col-reverse sm:flex-col h-full w-full pb-3 sm:pb-6">
               <TrackVisibility once>
@@ -131,7 +135,7 @@ export const Projects = () => {
                     className={`
                               flex-shrink-0 
                               flex flex-row mssm:flex-col justify-center items-center 
-                              h-16 
+                              h-16
                               ${favoriteProjects().length > 0
                         ? 'mssm:my-7 mssm:gap-2.5'
                         : ''
@@ -140,14 +144,27 @@ export const Projects = () => {
                               transition-all duration-200 ease-out
                            `}
                   >
-                    <div className="md:flex-grow flex justify-center items-center">
+                    <button
+                      className={`
+                        ${tabSelected === 'ALL' ? 'border-b border-teal-300' : ''}
+                        transition-all duration-200 ease-in-out
+                        group
+                        text-sm font-bold mxs:text-xs
+                        p-2.5
+                        uppercase tracking-wide 
+                        `}
+                      onClick={() => onSelectTab('ALL', 0)}
+                    >
+                      <span className="group-hover:text-teal-300">SHOW ALL</span>
+                    </button>
+                    <div className="md:flex-grow flex justify-center items-center mb-7">
                       {tabs.map((tab, index) => (
-                        <TabButton
+
+                        <FilterIconButton
                           key={`button_tab_` + index}
                           isVisible={isVisible}
-                          title={tab}
+                          technology={tab}
                           index={index}
-                          totalTabs={tabs.length - 1}
                           isActive={tabSelected === tab}
                           onClick={() => onSelectTab(tab, index)}
                         />
@@ -203,6 +220,7 @@ export const Projects = () => {
                            mt-4 sm:mt-0
                            rounded-md
                            border border-teal-700
+                           shadow-lg
                         `}
               >
                 <div

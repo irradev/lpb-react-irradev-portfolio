@@ -33,7 +33,7 @@ export const useImageTechnology = (name: TTechnologies) => {
       return <SiHtml5 fontSize={20} />;
     case 'CSS':
       return <SiCss3 fontSize={20} />;
-    case 'JavaScript':
+    case 'Javascript':
       return <SiJavascript fontSize={20} />;
     case 'React':
       return <FaReact fontSize={20} />;
