@@ -13,9 +13,99 @@ import imgMemoryMatch from '../assets/img/projects/memory-match.png';
 import imgZustandMini from '../assets/img/projects/zustand-mini.png';
 import imgReactRouterV6 from '../assets/img/projects/react-router-v6.png';
 import imgAnyDrive from '../assets/img/projects/any-drive-gum-road_COVER.png';
+import imgVueRickAndMortyApp from '../assets/img/projects/vue-rick-and-morty-app.png';
+import imgVueIndecisionApp from '../assets/img/projects/vue-indecision-app.png';
+import imgVuePokemonGame from '../assets/img/projects/vue-pokemon-game.png';
+import imgSergeyXVTemplate from '../assets/img/projects/sergey-xv-template.png';
+import imgHtmlTuContaEnLinea from '../assets/img/projects/html-tu-conta-en-linea.png';
+import imgVueAlegraWorldPics from '../assets/img/projects/vue-alegra-world-pics.png';
+import imgFluterCinemapedia from '../assets/img/projects/flutter-cinemapedia.png';
 
 export const FrontendProjects: IProject[] = [
-
+  {
+    id: 'fluttercd731427',
+    name: 'Cinemapedia',
+    shortDescription:
+      'Aplicación desarrollada en Flutter aplicando arquitectura limpia por capas (data, infrastructure y presentation), con gestión de estado mediante Riverpod y navegación declarativa usando go_router.',
+    image: imgFluterCinemapedia,
+    technologies: ['Flutter', 'Riverpod', 'go_router'],
+    urlGitHub: 'https://github.com/irradev/fh-flutter-cinemapedia',
+    urlDemo: 'https://irradev.github.io/fh-flutter-cinemapedia/home',
+    type: 'Frontend',
+    status: 'Terminado',
+  },
+  {
+    id: 'vueawp731429',
+    name: 'Alegra World Pics',
+    shortDescription:
+      'Prueba técnica en Vue 3 enfocada en arquitectura frontend, testing unitario y consumo de una API de facturación real.',
+    image: imgVueAlegraWorldPics,
+    technologies: ['Vue', 'VueRouter', 'Pinia', 'TanStackQuery'],
+    urlGitHub: 'https://github.com/irradev/prutec-alegra-world-pics',
+    urlDemo: 'https://alegraworldpics.netlify.app/',
+    type: 'Frontend',
+    status: 'Terminado',
+  },
+  {
+    id: 'htmltc731428',
+    name: 'Tu Conta en Linea',
+    shortDescription:
+      'Prueba técnica frontend desarrollada con HTML, CSS y JavaScript puro, enfocada en demostrar dominio de CSS nativo y desarrollo sin frameworks.',
+    image: imgHtmlTuContaEnLinea,
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    urlGitHub: 'https://github.com/irradev/prutec-dd',
+    urlDemo: 'https://tu-conta-en-linea.netlify.app/',
+    type: 'Frontend',
+    status: 'Terminado',
+  },
+  {
+    id: 'serxv731427',
+    name: 'Plantilla Invitación de XV años',
+    shortDescription:
+      'Plantilla web para invitación de XV años desarrollada para un cliente real, construida con HTML, JavaScript puro y Tailwind, enfocada en una experiencia clara y estética, con funcionalidades como cuenta regresiva, galería, mapa y contacto por WhatsApp.',
+    image: imgSergeyXVTemplate,
+    technologies: ['Sergey', 'Tailwind'],
+    urlGitHub: 'https://github.com/irradev/lpb-plantilla-invitacion-xv',
+    urlDemo: 'https://lpb-plantilla-invitacion-xv.vercel.app/',
+    type: 'Frontend',
+    status: 'Terminado',
+  },
+  {
+    id: 'vupok731426',
+    name: 'Vue Pokemon Game',
+    shortDescription:
+      'Juego simple desarrollado en Vue 3 utilizando Composition API, enfocado en la práctica de testing unitario con Vitest y el manejo de lógica de estado y consumo de API.',
+    image: imgVuePokemonGame,
+    technologies: ['Vue', 'Vitest'],
+    urlGitHub: 'https://github.com/irradev/fh-vue-04-ipokemon-game-',
+    urlDemo: 'https://vue-pokemon-game-irdv.vercel.app/',
+    type: 'Frontend',
+    status: 'Terminado',
+  },
+  {
+    id: 'vuiapp731425',
+    name: 'Vue Indecision App',
+    shortDescription:
+      'Aplicación en Vue 3 que simula un chat para consumir la API yesno.wtf, desarrollada como ejercicio práctico de testing unitario con Vitest y buenas prácticas de tipado.',
+    image: imgVueIndecisionApp,
+    technologies: ['Vue', 'Vitest'],
+    urlGitHub: 'https://github.com/irradev/fh-vue-03-indecision-app',
+    urlDemo: 'https://fh-vue-03-indecision-app.vercel.app/',
+    type: 'Frontend',
+    status: 'Terminado',
+  },
+  {
+    id: 'vueram731424',
+    name: 'Vue Rick and Morty App',
+    shortDescription:
+      'Aplicación Frontend en Vue 3 que consume la API de Rick and Morty, implementando Composition API, composables y manejo de estado remoto con TanStack Query.',
+    image: imgVueRickAndMortyApp,
+    technologies: ['Vue', 'VueRouter', 'Pinia', 'TanStackQuery'],
+    urlGitHub: 'https://github.com/irradev/fh-vue-rick-and-morty',
+    urlDemo: 'https://fh-vue-rick-and-morty.vercel.app/',
+    type: 'Frontend',
+    status: 'Desarrollando',
+  },
   {
     id: 'andr731423',
     name: 'AnyDrive - Web Template',

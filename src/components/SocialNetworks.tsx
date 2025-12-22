@@ -9,7 +9,7 @@ export const SocialNetworks = () => {
   const { allSocials } = useMySocialNetworks();
 
   return (
-    <div className="flex flex-col-reverse sm:flex-col justify-center items-center w-full md:w-3/6 text-shadow-xs">
+    <div className="flex flex-col sm:flex-col justify-center items-center w-full md:w-3/6 text-shadow-xs">
       <div className="mt-5 sm:mb-4">
         <h2 className="text-secondary mxs:text-xl text-2xl font-bold w-full text-center">
           {' '}
@@ -48,11 +48,10 @@ export const SocialNetworks = () => {
                     className={`
                                  flex flex-col justify-center items-center gap-1 
                                  mxs:text-4xl text-5xl my-2 
-                                 ${
-                                   isVisible
-                                     ? 'opacity-100 animate__animated animate__bounceIn '
-                                     : 'opacity-0'
-                                 }
+                                 ${isVisible
+                        ? 'opacity-100 animate__animated animate__bounceIn '
+                        : 'opacity-0'
+                      }
                                  hover:text-amber-400 
                                  mxs:hover:text-5xl hover:text-7xl transition-all duration-300 ease-out
                                  h-28 w-28

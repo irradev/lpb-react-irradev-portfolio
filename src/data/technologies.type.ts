@@ -1,4 +1,7 @@
 export type TTechnologies =
+  | 'HTML'
+  | 'JavaScript'
+  | 'CSS'
   | 'React'
   | 'Redux'
   | 'NextJs'
@@ -21,4 +24,11 @@ export type TTechnologies =
   | 'SASS'
   | 'Vuetify'
   | 'Vue'
-  | 'React Router';
+  | 'VueRouter'
+  | 'Pinia'
+  | 'TanStackQuery'
+  | 'Vitest'
+  | 'React Router'
+  | 'Flutter'
+  | 'Riverpod'
+  | 'go_router';

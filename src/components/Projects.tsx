@@ -10,6 +10,7 @@ import { MdFavorite } from 'react-icons/md';
 import { projects as dataProjects, IProject, TProject } from '../data/projects';
 
 import 'animate.css';
+import { SectionTitle } from './ui/SectionTitle';
 
 export type TTabsState = TProject | 'Favorites';
 
@@ -118,11 +119,10 @@ export const Projects = () => {
       id="projects"
     >
       <div className="container h-full pt-2 pb-16 sm:pt-6 sm:pb-16 md:pt-16 md:pb-4">
+        <SectionTitle title="Proyectos" />
         <SectionCard className="h-full  relative">
           <div className=" h-full w-full relative">
-            <h2 className="flex-srhink-0 text-xl text-center font-bold uppercase">
-              Proyectos
-            </h2>
+
             <div className=" flex flex-col-reverse sm:flex-col h-full w-full pb-3 sm:pb-6">
               <TrackVisibility once>
                 {({ isVisible }) => (
@@ -131,11 +131,10 @@ export const Projects = () => {
                               flex-shrink-0 
                               flex flex-row mssm:flex-col justify-center items-center 
                               h-16 
-                              ${
-                                favoriteProjects().length > 0
-                                  ? 'mssm:my-7 mssm:gap-2.5'
-                                  : ''
-                              } 
+                              ${favoriteProjects().length > 0
+                        ? 'mssm:my-7 mssm:gap-2.5'
+                        : ''
+                      } 
                               my-2
                               transition-all duration-200 ease-out
                            `}
@@ -157,11 +156,10 @@ export const Projects = () => {
                       className={`
                                     md:flex-shrink-0
                                     flex justify-center items-center
-                                    ${
-                                      favoriteProjects().length > 0
-                                        ? 'mssm:w-full w-20 h-10 '
-                                        : 'w-0 h-0'
-                                    }
+                                    ${favoriteProjects().length > 0
+                          ? 'mssm:w-full w-20 h-10 '
+                          : 'w-0 h-0'
+                        }
                                     
                                     relative md:absolute md:right-8
                                     transition-all duration-200 ease-out
@@ -177,11 +175,10 @@ export const Projects = () => {
                                     ml-6 sm:ml-8
                                     mssm:mb-4 mssm:mt-5 
                                     ${isVisible ? 'animate__heartBeat' : ''}
-                                    ${
-                                      favoriteProjects().length > 0
-                                        ? 'opacity-100'
-                                        : 'opacity-0'
-                                    }
+                                    ${favoriteProjects().length > 0
+                            ? 'opacity-100'
+                            : 'opacity-0'
+                          }
                                     transition-all duration-200 ease-out
                                  `}
                         style={{
