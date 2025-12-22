@@ -96,11 +96,10 @@ export const NavBar = () => {
             className={`
                      hidden sm:flex justify-center items-center gap-2 text-3xl font-bold
                      hover:
-                     ${
-                       isClickedOtherNavLinks.logo
-                         ? 'animate__animated animate__rubberBand '
-                         : ''
-                     }
+                     ${isClickedOtherNavLinks.logo
+                ? 'animate__animated animate__rubberBand '
+                : ''
+              }
                   `}
           >
             {/* <img
@@ -123,14 +122,13 @@ export const NavBar = () => {
                 href={navLink.targetId}
                 className={`
                            nav-link 
-                           ${
-                             navLink.isActive
-                               ? 'animate__animated animate__rubberBand nav-link-active'
-                               : isClickedOtherNavLinks.logo &&
-                                 navLink.targetId === '#home'
-                               ? 'nav-link-active'
-                               : ''
-                           }
+                           ${navLink.isActive
+                    ? 'animate__animated animate__rubberBand nav-link-active'
+                    : isClickedOtherNavLinks.logo &&
+                      navLink.targetId === '#home'
+                      ? 'nav-link-active'
+                      : ''
+                  }
                         `}
               >
                 {navLink.icon}
@@ -153,11 +151,10 @@ export const NavBar = () => {
           <a
             onClick={() => setActiveNavLink('contact')}
             href="#contact"
-            className={`nav-link-contact ${
-              isClickedOtherNavLinks.contact
-                ? 'animate__animated animate__rubberBand nav-link-contact-active'
-                : ''
-            }`}
+            className={`nav-link-contact ${isClickedOtherNavLinks.contact
+              ? 'animate__animated animate__rubberBand nav-link-contact-active'
+              : ''
+              }`}
           >
             <BiSend className="text-2xl sm:hidden" />
             <span className="mxs:text-xs text-base sm:text-lg font-medium">
@@ -173,7 +170,7 @@ export const NavBar = () => {
 
 const BgOpacityEffect = () => {
   return (
-    <div className="w-full h-14  fixed bottom-0 sm:px-4 sm:absolute sm:top-0 -z-10 bg-gradient-to-l from-teal-900 opacity-80"></div>
+    <div className="w-full h-14  fixed bottom-0 sm:px-4 sm:absolute sm:top-0 -z-10 bg-gradient-to-l from-transparent via-teal-900/60 opacity-80"></div>
   );
 };
 

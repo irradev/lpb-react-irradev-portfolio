@@ -7,7 +7,7 @@ import { Footer } from '../components/Footer';
 
 export const MainLayout = () => {
   return (
-    <div className="static h-full bg-stone-800 bg-gradient-to-b from-teal-900  to-slate-900">
+    <div className="static h-full bg-stone-800 bg-gradient-to-b from-slate-900 via-teal-900  to-slate-900">
       <div className="relative w-full ">
         <NavBar />
         <Banner />
