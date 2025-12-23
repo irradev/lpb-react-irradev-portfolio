@@ -10,8 +10,10 @@ export const MainLayout = () => {
     <div className="static h-full bg-stone-800 bg-gradient-to-b from-slate-900 via-teal-900  to-slate-900">
       <div className="relative w-full ">
         <NavBar />
-        <Banner />
-        {/* <Skills /> */}
+        <div className="flex flex-col justify-evenly h-screen">
+          <Banner />
+          <Skills />
+        </div>
         <Projects />
         <Contact />
         <Footer />
