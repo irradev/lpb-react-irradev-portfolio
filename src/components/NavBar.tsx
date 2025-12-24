@@ -11,7 +11,7 @@ import { FiFolder } from 'react-icons/fi';
 import { AiOutlineHome } from 'react-icons/ai';
 import { Link } from 'react-router';
 
-type TtargetId = 'home' | 'projects';
+type TtargetId = 'home' | 'projects' | 'contact';
 
 interface INavLink {
   name: string;
@@ -34,6 +34,12 @@ export const NavBar = () => {
       name: 'Proyectos',
       icon: <FiFolder className="text-3xl sm:hidden" />,
       targetId: 'projects',
+      isActive: false,
+    },
+    {
+      name: 'Contacto',
+      icon: <BiSend className="text-3xl sm:hidden" />,
+      targetId: 'contact',
       isActive: false,
     },
   ];
@@ -84,8 +90,8 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <nav className="flex justify-center items-center px-1 w-full h-16 sm:h-14 backdrop-blur-sm fixed bottom-0 z-30 sm:sticky sm:top-0 bg-teal-900/40 sm:bg-transparent">
-      <div className="flex justify-between items-center  sm:container w-full ">
+    <nav className="flex justify-center items-center px-1 w-full h-16 sm:h-14 backdrop-blur-sm fixed bottom-4 z-30 max-w-[95%] sm:max-w-[100%] left-1/2 transform -translate-x-1/2 sm:sticky sm:top-0 sm:left-0 sm:transform sm:translate-x-0 bg-stone-100 text-slate-800 sm:bg-transparent sm:text-white rounded-2xl">
+      <div className="flex justify-between items-center sm:container w-full ">
         <div className="hidden sm:block flex-shrink-0">
           <Link
             onClick={() => handleClickNavLink('logo')}
@@ -108,7 +114,7 @@ export const NavBar = () => {
           </Link>
         </div>
         <div className="flex-grow sm:flex-grow-0 flex justify-around items-center text-xs sm:gap-8 sm:text-lg">
-          <div className="flex-grow justify-around gap-1 sm:flex-grow-0 flex sm:gap-4 font-medium sm:font-normal">
+          <div className="flex-grow justify-evenly gap-1 sm:flex-grow-0 flex sm:gap-4 font-medium sm:font-normal">
             {navLinks.map((navLink, index) => (
               <Link
                 key={index + '-' + navLink.name}
@@ -118,8 +124,9 @@ export const NavBar = () => {
                 onClick={() => handleClickNavLink(navLink.targetId)}
                 to="/"
                 className={`
-                           nav-link 
-                           ${navLink.isActive
+                  nav-link 
+                  w-full max-w-[150px] sm:w-auto
+                  ${navLink.isActive
                     ? 'animate__animated animate__rubberBand nav-link-active'
                     : isClickedOtherNavLinks.logo &&
                       navLink.targetId === 'home'
@@ -148,7 +155,7 @@ export const NavBar = () => {
           <Link
             onClick={() => handleClickNavLink('contact')}
             to="/"
-            className={`nav-link-contact ${isClickedOtherNavLinks.contact
+            className={`nav-link-contact hidden sm:flex ${isClickedOtherNavLinks.contact
               ? 'animate__animated animate__rubberBand nav-link-contact-active'
               : ''
               }`}

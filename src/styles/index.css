@@ -95,7 +95,7 @@
    }
 
    .nav-link-active {
-      @apply text-teal-200 sm:border-b-white sm:pb-2
+      @apply text-teal-600 sm:border-b-white sm:pb-2 mb-2 sm:mb-0;
    }
 
    .nav-link-contact {
