@@ -9,7 +9,7 @@ export const AppRouter = () => {
         <Routes>
             <Route element={<MainLayout />}>
                 <Route index element={<Home />} />
-                <Route path="project/:id" element={<ProjectDetails />} />
+                <Route path="project/:slug" element={<ProjectDetails />} />
                 <Route path="page-not-found" element={<NotFound404 />} />
             </Route>
 

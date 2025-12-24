@@ -7,9 +7,9 @@ import { FiGithub, FiLink } from "react-icons/fi";
 import { TbBrandGumroad } from "react-icons/tb";
 
 export const ProjectDetails = () => {
-    const { id } = useParams();
+    const { slug } = useParams();
 
-    const project = projects.find((project) => project.id === id);
+    const project = projects.find((project) => project.slug === slug);
 
     if (!project) {
         return <Navigate to="/page-not-found" />;

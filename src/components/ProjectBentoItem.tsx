@@ -47,7 +47,7 @@ export const ProjectBentoItem: FC<ProjectBentoItemProps> = ({
   const size = project.uiSize || 'medium';
 
   const handleNavigate = () => {
-    navigate(`/project/${project.id}`);
+    navigate(`/project/${project.slug}`);
   };
 
   const handleFavorites = (id: string, e: React.MouseEvent) => {

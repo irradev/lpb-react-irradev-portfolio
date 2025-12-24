@@ -25,6 +25,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'fluttercd731427',
     name: 'Cinemapedia',
+    slug: 'cinemapedia',
     shortDescription:
       'Aplicación desarrollada en Flutter aplicando arquitectura limpia por capas (data, infrastructure y presentation), con gestión de estado mediante Riverpod y navegación declarativa usando go_router.',
     image: imgFluterCinemapedia,
@@ -39,6 +40,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'vueawp731429',
     name: 'Alegra World Pics',
+    slug: 'alegra-world-pics',
     shortDescription:
       'Prueba técnica en Vue 3 enfocada en arquitectura frontend, testing unitario y consumo de una API de facturación real.',
     image: imgVueAlegraWorldPics,
@@ -53,6 +55,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'htmltc731428',
     name: 'Tu Conta en Linea',
+    slug: 'tu-conta-en-linea',
     shortDescription:
       'Prueba técnica frontend desarrollada con HTML, CSS y JavaScript puro, enfocada en demostrar dominio de CSS nativo y desarrollo sin frameworks.',
     image: imgHtmlTuContaEnLinea,
@@ -67,6 +70,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'serxv731427',
     name: 'Plantilla Invitación de XV años',
+    slug: 'plantilla-invitacion-xv',
     shortDescription:
       'Plantilla web para invitación de XV años desarrollada para un cliente real, construida con HTML, JavaScript puro y Tailwind, enfocada en una experiencia clara y estética, con funcionalidades como cuenta regresiva, galería, mapa y contacto por WhatsApp.',
     image: imgSergeyXVTemplate,
@@ -81,6 +85,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'vupok731426',
     name: 'Vue Pokemon Game',
+    slug: 'vue-pokemon-game',
     shortDescription:
       'Juego simple desarrollado en Vue 3 utilizando Composition API, enfocado en la práctica de testing unitario con Vitest y el manejo de lógica de estado y consumo de API.',
     image: imgVuePokemonGame,
@@ -95,6 +100,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'vuiapp731425',
     name: 'Vue Indecision App',
+    slug: 'vue-indecision-app',
     shortDescription:
       'Aplicación en Vue 3 que simula un chat para consumir la API yesno.wtf, desarrollada como ejercicio práctico de testing unitario con Vitest y buenas prácticas de tipado.',
     image: imgVueIndecisionApp,
@@ -109,6 +115,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'vueram731424',
     name: 'Vue Rick and Morty App',
+    slug: 'vue-rick-and-morty-app',
     shortDescription:
       'Aplicación Frontend en Vue 3 que consume la API de Rick and Morty, implementando Composition API, composables y manejo de estado remoto con TanStack Query.',
     image: imgVueRickAndMortyApp,
@@ -123,6 +130,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'andr731423',
     name: 'AnyDrive - Web Template',
+    slug: 'any-drive-web-template',
     shortDescription:
       'Plantilla web con temática de Cloud Service. Incluye páginas clave (Home, Contacto, Login y 404) y enfoque en diseño responsivo y UI consistente.',
     image: imgAnyDrive,
@@ -137,6 +145,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'dazu731422',
     name: 'Dashboard Zustand',
+    slug: 'dashboard-zustand',
     shortDescription:
       'Dashboard desarrollado en React como práctica de manejo de estado global usando Zustand, enfocado en simplicidad y escalabilidad.',
     image: imgZustandMini,
@@ -151,6 +160,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'edmema731421',
     name: 'Memory Match',
+    slug: 'memory-match',
     shortDescription:
       'Juego de memorama desarrollado en React, enfocado en lógica de estado, componentes reutilizables y experiencia de usuario.',
     image: imgMemoryMatch,
@@ -165,6 +175,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'rechafo3948271',
     name: 'React Chat Forms',
+    slug: 'react-chat-forms',
     shortDescription:
       'Aplicación de formularios con interacción tipo chat, desarrollada como prueba técnica, enfocada en UX, flujo conversacional y manejo de estado.',
     image: imgReactChatForms,
@@ -179,6 +190,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'irpo20137771',
     name: 'irradev Portfolio',
+    slug: 'irradev-portfolio',
     shortDescription:
       'Portafolio personal desarrollado en React, con diseño totalmente responsivo y enfoque en claridad visual y estructura de componentes.  Mínimo de ancho de 280px.',
     image: imgIrraDevPortfolio,
@@ -193,6 +205,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'mouiuxro134',
     name: 'Modal UI/UX RoutePath',
+    slug: 'modal-ui-ux-route-path',
     shortDescription:
       'Propuesta UI/UX aplicada en React para mejorar la experiencia móvil del componente “Hoja de Ruta”, documentando el análisis y resolución de problemas de navegación y scroll.',
     image: imgModalUiUx,
@@ -208,6 +221,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'poapp1482',
     name: 'Pokemon App',
+    slug: 'pokemon-app',
     shortDescription: 'Aplicación en Next.js para listado de Pokémon, con manejo de favoritos y enfoque en renderizado eficiente y navegación.',
     image: imgPokemonApp,
     technologies: ['NextJs'],
@@ -221,6 +235,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'rero731422',
     name: 'React Router Dom v6',
+    slug: 'react-router-dom-v6',
     shortDescription: 'Práctica de enrutamiento y navegación en React usando React Router Dom v6.',
     image: imgReactRouterV6,
     technologies: ['React', 'React Router'],
@@ -234,6 +249,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'depo14022',
     name: 'DevCorel Portfolio',
+    slug: 'devcorel-portfolio',
     shortDescription: 'Práctica de dark mode y efectos visuales usando clip-path en CSS.',
     image: imgDevCorelPortfolio,
     technologies: ['Sergey', 'CSS'],
@@ -247,6 +263,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'ofreap132',
     name: 'OfferJobs Responsive App',
+    slug: 'offerjobs-responsive-app',
     shortDescription: 'Proyecto Frontend en React enfocado en la implementación de Redux para manejo de estado y diseño responsivo.',
     image: imgOfferJobsApp,
     technologies: ['React', 'Redux'],
@@ -260,6 +277,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'tyno20192',
     name: 'Typescript Notes',
+    slug: 'typescript-notes',
     shortDescription: 'Aplicación de notas desarrollada con Vite, TypeScript y Tailwind, enfocada en tipado estricto, estructura de componentes y UI ligera.',
     image: imgViteTypescriptNotes,
     technologies: ['Typescript', 'Tailwind'],
@@ -272,6 +290,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'revida39248',
     name: 'React Virtualized DataTables',
+    slug: 'react-virtualized-data-tables',
     shortDescription:
       'Implementación de tablas virtualizadas en React para renderizar grandes volúmenes de datos optimizando rendimiento y consumo de recursos.',
     image: imgReactVirtualizedDataTables,
@@ -285,6 +304,7 @@ export const FrontendProjects: IProject[] = [
   {
     id: 'remere0138482',
     name: 'React Messenger Responsive',
+    slug: 'react-messenger-responsive',
     shortDescription:
       'Proyecto Frontend experimental enfocado en UI responsiva, implementando slides y layouts adaptativos mediante media queries en CSS.',
     image: imgReactMessengerOld,

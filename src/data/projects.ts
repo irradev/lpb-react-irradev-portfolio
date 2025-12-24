@@ -11,6 +11,7 @@ export type TUiSize = 'large' | 'medium' | 'small';
 export interface IProject {
   id: string;
   name: string;
+  slug: string;
   shortDescription: string;
   image: string;
   technologies: TTechnologies[];
