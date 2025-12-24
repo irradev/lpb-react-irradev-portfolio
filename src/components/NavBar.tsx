@@ -9,8 +9,9 @@ import { useMySocialNetworks } from '../hooks/useMySocialNetworks';
 import { BiSend } from 'react-icons/bi';
 import { FiFolder } from 'react-icons/fi';
 import { AiOutlineHome } from 'react-icons/ai';
+import { Link } from 'react-router';
 
-type TtargetId = '#home' | '#projects';
+type TtargetId = 'home' | 'projects';
 
 interface INavLink {
   name: string;
@@ -26,13 +27,13 @@ export const NavBar = () => {
     {
       name: 'Home',
       icon: <AiOutlineHome className="text-3xl sm:hidden" />,
-      targetId: '#home',
+      targetId: 'home',
       isActive: false,
     },
     {
       name: 'Proyectos',
       icon: <FiFolder className="text-3xl sm:hidden" />,
-      targetId: '#projects',
+      targetId: 'projects',
       isActive: false,
     },
   ];
@@ -68,6 +69,14 @@ export const NavBar = () => {
     );
   };
 
+  const handleClickNavLink = (targetId: string) => {
+    setActiveNavLink(targetId);
+    setTimeout(() => {
+      document.getElementById(targetId)
+        ?.scrollIntoView({ behavior: 'smooth' })
+    }, 100)
+  };
+
   useEffect(() => {
     let hashLink = window.location.hash;
     let $navLink = $navLinkElements.current[hashLink as any];
@@ -78,9 +87,9 @@ export const NavBar = () => {
     <nav className="flex justify-center items-center px-1 w-full h-14  backdrop-blur-sm  fixed bottom-0 z-30 sm:sticky sm:top-0">
       <div className="flex justify-between items-center  sm:container w-full ">
         <div className="hidden sm:block flex-shrink-0">
-          <a
-            onClick={() => setActiveNavLink('logo')}
-            href="#home"
+          <Link
+            onClick={() => handleClickNavLink('logo')}
+            to="/"
             className={`
                      hidden sm:flex justify-center items-center gap-2 text-3xl font-bold
                      hover:
@@ -96,24 +105,24 @@ export const NavBar = () => {
                      alt="irradev logo"
                   /> */}
             <span>irradev</span>
-          </a>
+          </Link>
         </div>
         <div className="flex-grow sm:flex-grow-0 flex justify-around items-center text-xs sm:gap-8 sm:text-lg">
           <div className="flex-grow justify-around gap-1 sm:flex-grow-0 flex sm:gap-4 font-medium sm:font-normal">
             {navLinks.map((navLink, index) => (
-              <a
+              <Link
                 key={index + '-' + navLink.name}
                 ref={($el) =>
                   ($navLinkElements.current![navLink.targetId as any] = $el)
                 }
-                onClick={() => setActiveNavLink(navLink.targetId)}
-                href={navLink.targetId}
+                onClick={() => handleClickNavLink(navLink.targetId)}
+                to="/"
                 className={`
                            nav-link 
                            ${navLink.isActive
                     ? 'animate__animated animate__rubberBand nav-link-active'
                     : isClickedOtherNavLinks.logo &&
-                      navLink.targetId === '#home'
+                      navLink.targetId === 'home'
                       ? 'nav-link-active'
                       : ''
                   }
@@ -121,7 +130,7 @@ export const NavBar = () => {
               >
                 {navLink.icon}
                 <span className="sm:inline">{navLink.name}</span>
-              </a>
+              </Link>
             ))}
           </div>
           <div className="hidden md:flex gap-4 text-2xl ">
@@ -136,9 +145,9 @@ export const NavBar = () => {
               </a>
             ))}
           </div>
-          <a
-            onClick={() => setActiveNavLink('contact')}
-            href="#contact"
+          <Link
+            onClick={() => handleClickNavLink('contact')}
+            to="/"
             className={`nav-link-contact ${isClickedOtherNavLinks.contact
               ? 'animate__animated animate__rubberBand nav-link-contact-active'
               : ''
@@ -148,7 +157,7 @@ export const NavBar = () => {
             <span className="mxs:text-xs text-base sm:text-lg font-medium">
               ¡Contáctame!
             </span>
-          </a>
+          </Link>
         </div>
       </div>
       <BgOpacityEffect />
