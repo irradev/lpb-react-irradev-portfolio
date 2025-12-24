@@ -1,6 +1,4 @@
 import {
-  AnchorHTMLAttributes,
-  MutableRefObject,
   ReactElement,
   useEffect,
   useRef,
@@ -8,15 +6,12 @@ import {
 } from 'react';
 import { useMySocialNetworks } from '../hooks/useMySocialNetworks';
 
-import { BsCodeSlash } from 'react-icons/bs';
-import { RiMenuUnfoldFill } from 'react-icons/ri';
 import { BiSend } from 'react-icons/bi';
 import { FiFolder } from 'react-icons/fi';
 import { AiOutlineHome } from 'react-icons/ai';
+import { Link } from 'react-router';
 
-import logo from '../assets/img/logo.png';
-
-type TtargetId = '#home' | '#skills' | '#projects';
+type TtargetId = 'home' | 'projects' | 'contact';
 
 interface INavLink {
   name: string;
@@ -32,19 +27,19 @@ export const NavBar = () => {
     {
       name: 'Home',
       icon: <AiOutlineHome className="text-3xl sm:hidden" />,
-      targetId: '#home',
+      targetId: 'home',
       isActive: false,
     },
-    // {
-    //   name: 'Skills',
-    //   icon: <BsCodeSlash className="text-3xl sm:hidden" />,
-    //   targetId: '#skills',
-    //   isActive: false,
-    // },
     {
       name: 'Proyectos',
       icon: <FiFolder className="text-3xl sm:hidden" />,
-      targetId: '#projects',
+      targetId: 'projects',
+      isActive: false,
+    },
+    {
+      name: 'Contacto',
+      icon: <BiSend className="text-3xl sm:hidden" />,
+      targetId: 'contact',
       isActive: false,
     },
   ];
@@ -80,6 +75,14 @@ export const NavBar = () => {
     );
   };
 
+  const handleClickNavLink = (targetId: string) => {
+    setActiveNavLink(targetId);
+    setTimeout(() => {
+      document.getElementById(targetId)
+        ?.scrollIntoView({ behavior: 'smooth' })
+    }, 100)
+  };
+
   useEffect(() => {
     let hashLink = window.location.hash;
     let $navLink = $navLinkElements.current[hashLink as any];
@@ -87,20 +90,19 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <nav className="flex justify-center items-center px-1 w-full h-14  backdrop-blur-sm  fixed bottom-0 z-30 sm:sticky sm:top-0">
-      <div className="flex justify-between items-center  sm:container w-full ">
+    <nav className="flex justify-center items-center px-1 w-full h-16 sm:h-14 backdrop-blur-sm fixed bottom-4 z-30 max-w-[95%] sm:max-w-[100%] left-1/2 transform -translate-x-1/2 sm:sticky sm:top-0 sm:left-0 sm:transform sm:translate-x-0 bg-stone-100 text-slate-800 sm:bg-transparent sm:text-white rounded-2xl">
+      <div className="flex justify-between items-center sm:container w-full ">
         <div className="hidden sm:block flex-shrink-0">
-          <a
-            onClick={() => setActiveNavLink('logo')}
-            href="#home"
+          <Link
+            onClick={() => handleClickNavLink('logo')}
+            to="/"
             className={`
                      hidden sm:flex justify-center items-center gap-2 text-3xl font-bold
                      hover:
-                     ${
-                       isClickedOtherNavLinks.logo
-                         ? 'animate__animated animate__rubberBand '
-                         : ''
-                     }
+                     ${isClickedOtherNavLinks.logo
+                ? 'animate__animated animate__rubberBand '
+                : ''
+              }
                   `}
           >
             {/* <img
@@ -109,33 +111,33 @@ export const NavBar = () => {
                      alt="irradev logo"
                   /> */}
             <span>irradev</span>
-          </a>
+          </Link>
         </div>
         <div className="flex-grow sm:flex-grow-0 flex justify-around items-center text-xs sm:gap-8 sm:text-lg">
-          <div className="flex-grow justify-around gap-1 sm:flex-grow-0 flex sm:gap-4 font-medium sm:font-normal">
+          <div className="flex-grow justify-evenly gap-1 sm:flex-grow-0 flex sm:gap-4 font-medium sm:font-normal">
             {navLinks.map((navLink, index) => (
-              <a
+              <Link
                 key={index + '-' + navLink.name}
                 ref={($el) =>
                   ($navLinkElements.current![navLink.targetId as any] = $el)
                 }
-                onClick={() => setActiveNavLink(navLink.targetId)}
-                href={navLink.targetId}
+                onClick={() => handleClickNavLink(navLink.targetId)}
+                to="/"
                 className={`
-                           nav-link 
-                           ${
-                             navLink.isActive
-                               ? 'animate__animated animate__rubberBand nav-link-active'
-                               : isClickedOtherNavLinks.logo &&
-                                 navLink.targetId === '#home'
-                               ? 'nav-link-active'
-                               : ''
-                           }
+                  nav-link 
+                  w-full max-w-[150px] sm:w-auto
+                  ${navLink.isActive
+                    ? 'animate__animated animate__rubberBand nav-link-active'
+                    : isClickedOtherNavLinks.logo &&
+                      navLink.targetId === 'home'
+                      ? 'nav-link-active'
+                      : ''
+                  }
                         `}
               >
                 {navLink.icon}
                 <span className="sm:inline">{navLink.name}</span>
-              </a>
+              </Link>
             ))}
           </div>
           <div className="hidden md:flex gap-4 text-2xl ">
@@ -150,20 +152,19 @@ export const NavBar = () => {
               </a>
             ))}
           </div>
-          <a
-            onClick={() => setActiveNavLink('contact')}
-            href="#contact"
-            className={`nav-link-contact ${
-              isClickedOtherNavLinks.contact
-                ? 'animate__animated animate__rubberBand nav-link-contact-active'
-                : ''
-            }`}
+          <Link
+            onClick={() => handleClickNavLink('contact')}
+            to="/"
+            className={`nav-link-contact hidden sm:flex ${isClickedOtherNavLinks.contact
+              ? 'animate__animated animate__rubberBand nav-link-contact-active'
+              : ''
+              }`}
           >
-            <BiSend className="text-2xl sm:hidden" />
+            <BiSend className="text-2xl hidden sm:block mr-2" />
             <span className="mxs:text-xs text-base sm:text-lg font-medium">
               ¡Contáctame!
             </span>
-          </a>
+          </Link>
         </div>
       </div>
       <BgOpacityEffect />
@@ -173,7 +174,7 @@ export const NavBar = () => {
 
 const BgOpacityEffect = () => {
   return (
-    <div className="w-full h-14  fixed bottom-0 sm:px-4 sm:absolute sm:top-0 -z-10 bg-gradient-to-l from-teal-900 opacity-80"></div>
+    <div className="w-full fixed bottom-0 sm:px-4 sm:absolute sm:top-0 -z-10 bg-gradient-to-l from-transparent via-teal-900/60 opacity-80"></div>
   );
 };
 

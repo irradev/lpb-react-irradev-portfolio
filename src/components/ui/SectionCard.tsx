@@ -11,11 +11,11 @@ export const SectionCard: FC<SectionCardProps> = ({
 }) => {
    return (
       <div
-         className={`flex flex-col justify-start items-center p-4 relative rounded-lg z-10 shadow-lg mx-auto ${className}`}
+         className={`flex flex-col justify-start items-center p-4 relative rounded-lg z-10 mx-auto ${className}`}
       >
          {children}
 
-         <BackgroundEffect />
+         {/* <BackgroundEffect /> */}
       </div>
    );
 };

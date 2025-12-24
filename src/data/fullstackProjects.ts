@@ -6,19 +6,20 @@ export const FullstackProjects: IProject[] = [
     id: 'tesh731423',
     name: 'Teslo Shop Demo',
     shortDescription:
-      'Tienda virtual en NextJS 14. Cuenta con un carrito de compras, un sistema de autenticación y una pasarela de pagos con paypal.',
+      'Demo Fullstack de e-commerce desarrollada en Next.js 14, con autenticación, carrito de compras y flujo de pagos, integrando manejo de estado, validaciones y base de datos.',
     image: imgTesloShop,
     technologies: [
       'NextJs',
-      'Tailwind',
       'Zustand',
       'Prisma',
       'Postgresql',
       'Zod',
     ],
+    tags: ['Fullstack', 'NextJs', 'Tailwind', 'Zustand', 'Prisma', 'Postgresql', 'Zod'],
     urlGitHub: 'https://github.com/irradev/fh-nextjs-teslo-shop',
     urlDemo: 'https://fh-nextjs-teslo-shop.vercel.app/',
     type: 'Fullstack',
     status: 'Terminado',
+    uiSize: 'large',
   },
 ];

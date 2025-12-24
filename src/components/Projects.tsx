@@ -10,13 +10,18 @@ import { MdFavorite } from 'react-icons/md';
 import { projects as dataProjects, IProject, TProject } from '../data/projects';
 
 import 'animate.css';
+import { SectionTitle } from './ui/SectionTitle';
+import { ProjectBentoItem } from './ProjectBentoItem';
+import { FilterIconButton } from './FilterIconButton';
+import { TTechnologies } from '../data/technologies.type';
+import { TFilterTechnologies } from '../data/filterTechnologies.type';
 
-export type TTabsState = TProject | 'Favorites';
+export type TTabsState = TFilterTechnologies | 'Favorites' | 'ALL';
 
 export const Projects = () => {
   //  const tabs: TProject[] = ['Frontend', 'Backend', 'Fullstack'];
-  const tabs: TProject[] = ['Frontend', 'Fullstack'];
-  const [tabSelected, setTabSelected] = useState<TTabsState>('Frontend');
+  const tabs: TFilterTechnologies[] = ['HTML', 'Javascript', 'Typescript', 'Sergey', 'React', 'Vue', 'NextJs', 'Nuxt', 'Flutter'];
+  const [tabSelected, setTabSelected] = useState<TTabsState>('ALL');
   const [projects, setProjects] = useState<IProject[]>([]);
   const [clickedFavorites, setClickedFavorites] = useState<{
     clicks: number;
@@ -29,8 +34,16 @@ export const Projects = () => {
   const $favButton = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
-    if (tabSelected !== 'Favorites') {
-      setProjects(dataProjects.filter((p) => p.type === tabSelected));
+    if (tabSelected !== 'Favorites' && tabSelected !== 'ALL') {
+      setProjects(dataProjects.filter((p) => p.tags.includes(tabSelected)));
+    } else if (tabSelected === 'Favorites') {
+      setProjects(
+        dataProjects.filter((project) =>
+          favoriteProjects().some((favId) => favId === project.id)
+        )
+      );
+    } else {
+      setProjects(dataProjects);
     }
   }, [tabSelected]);
 
@@ -42,33 +55,26 @@ export const Projects = () => {
         $favButton.current!.style.animationDelay = '0s';
       }, 50);
     } else if (clickedFavorites.clicks > 0 && favoriteProjects().length === 0) {
-      onSelectTab('Frontend', 0);
+      onSelectTab('ALL', 0);
     }
   }, [clickedFavorites]);
 
-  const onSelectTab = (tab: TProject, index: number) => {
+  const onSelectTab = (tab: TTabsState, index: number) => {
     if (tab === tabSelected) return;
 
-    $containerProjects.current?.classList.remove('animate__fadeInLeft');
-    $containerProjects.current?.classList.remove('animate__fadeInRight');
+    // $containerProjects.current?.classList.remove('animate__fadeInLeft');
+    // $containerProjects.current?.classList.remove('animate__fadeInRight');
     $containerProjects.current?.classList.add('hidden');
     if (tabSelected === 'Favorites') {
       setTimeout(() => {
         $containerProjects.current?.classList.remove('hidden');
-        $containerProjects.current?.classList.add('animate__fadeInLeft');
+      }, 50);
+    } else if (tabSelected === 'ALL') {
+      setTimeout(() => {
+        $containerProjects.current?.classList.remove('hidden');
       }, 50);
     } else {
-      if (index > tabs.indexOf(tabSelected)) {
-        setTimeout(() => {
-          $containerProjects.current?.classList.remove('hidden');
-          $containerProjects.current?.classList.add('animate__fadeInRight');
-        }, 50);
-      } else if (index < tabs.indexOf(tabSelected)) {
-        setTimeout(() => {
-          $containerProjects.current?.classList.remove('hidden');
-          $containerProjects.current?.classList.add('animate__fadeInLeft');
-        }, 50);
-      }
+      $containerProjects.current?.classList.remove('hidden');
     }
     setTabSelected(tab);
   };
@@ -85,9 +91,9 @@ export const Projects = () => {
   const listProjects = useMemo(
     () => (
       <>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-5 rounded-md md:max-w-2xl md:mx-auto lg:max-w-none">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-5 auto-rows-[240px] md:mx-auto">
           {projects.map((project, index) => (
-            <CardProject
+            <ProjectBentoItem
               key={project.id}
               index={index + 1}
               project={project}
@@ -114,82 +120,93 @@ export const Projects = () => {
 
   return (
     <section
-      className="flex justify-center items-center  relative"
+      className="flex justify-center items-center relative"
       id="projects"
     >
       <div className="container h-full pt-2 pb-16 sm:pt-6 sm:pb-16 md:pt-16 md:pb-4">
+        <SectionTitle title="Proyectos" />
         <SectionCard className="h-full  relative">
-          <div className=" h-full w-full relative">
-            <h2 className="flex-srhink-0 text-xl text-center font-bold uppercase">
-              Proyectos
-            </h2>
-            <div className=" flex flex-col-reverse sm:flex-col h-full w-full pb-3 sm:pb-6">
+          <div className="h-full w-full relative">
+
+            <div className=" flex flex-col h-full w-full pb-3">
               <TrackVisibility once>
                 {({ isVisible }) => (
-                  <div
-                    className={`
-                              flex-shrink-0 
-                              flex flex-row mssm:flex-col justify-center items-center 
-                              h-16 
-                              ${
-                                favoriteProjects().length > 0
-                                  ? 'mssm:my-7 mssm:gap-2.5'
-                                  : ''
-                              } 
-                              my-2
-                              transition-all duration-200 ease-out
-                           `}
-                  >
-                    <div className="md:flex-grow flex justify-center items-center">
-                      {tabs.map((tab, index) => (
-                        <TabButton
-                          key={`button_tab_` + index}
-                          isVisible={isVisible}
-                          title={tab}
-                          index={index}
-                          totalTabs={tabs.length - 1}
-                          isActive={tabSelected === tab}
-                          onClick={() => onSelectTab(tab, index)}
-                        />
-                      ))}
-                    </div>
+                  <div className="flex flex-col-reverse gap-2 justify-between md:flex-row">
                     <div
                       className={`
-                                    md:flex-shrink-0
-                                    flex justify-center items-center
-                                    ${
-                                      favoriteProjects().length > 0
-                                        ? 'mssm:w-full w-20 h-10 '
-                                        : 'w-0 h-0'
-                                    }
-                                    
-                                    relative md:absolute md:right-8
-                                    transition-all duration-200 ease-out
-                                 `}
+                      flex flex-row flex-wrap justify-start items-center 
+                      
+                      ${favoriteProjects().length > 0
+                          ? 'mssm:my-7 mssm:gap-2.5'
+                          : ''
+                        } 
+                      my-2
+                      transition-all duration-200 ease-out
+                    `}
                     >
+
+                      <div className="flex flex-wrap gap-6 sm:gap-0 justify-center items-center mt-8 sm:mt-6 sm:mb-7 ">
+                        {tabs.map((tab, index) => (
+
+                          <FilterIconButton
+                            key={`button_tab_` + index}
+                            isVisible={isVisible}
+                            technology={tab}
+                            index={index}
+                            isActive={tabSelected === tab}
+                            onClick={() => onSelectTab(tab, index)}
+                          />
+                        ))}
+
+                      </div>
+                      <div
+                        className={`
+                          md:flex-shrink-0
+                          flex justify-center items-center
+                          ${favoriteProjects().length > 0
+                            ? 'mssm:w-full w-20 h-10 '
+                            : 'w-0 h-0'
+                          }
+                          relative md:absolute md:right-8
+                          transition-all duration-200 ease-out
+                        `}
+                      >
+                      </div>
+                    </div>
+                    <div className="flex flex-row justify-center items-center">
+                      <button
+                        className={`
+                        ${tabSelected === 'ALL' ? 'border-b border-teal-300' : ''}
+                        transition-all duration-200 ease-in-out
+                        group
+                        text-sm font-bold mxs:text-xs
+                        p-2.5
+                        uppercase tracking-wide 
+                        `}
+                        onClick={() => onSelectTab('ALL', 0)}
+                      >
+                        <span className="group-hover:text-teal-300">SHOW ALL</span>
+                      </button>
+
                       <button
                         ref={$favButton}
                         onClick={onShowFavoritProjects}
                         className={`
-                                    fav-button-project gap-2 
-                                    bg-red-500 text-stone-200 
-                                    px-4 py-1.5 
-                                    ml-6 sm:ml-8
-                                    mssm:mb-4 mssm:mt-5 
-                                    ${isVisible ? 'animate__heartBeat' : ''}
-                                    ${
-                                      favoriteProjects().length > 0
-                                        ? 'opacity-100'
-                                        : 'opacity-0'
-                                    }
-                                    transition-all duration-200 ease-out
-                                 `}
+                          fav-button-project gap-2 
+                          bg-red-500 text-stone-200 
+                          px-4 py-1.5 
+                          ml-6 sm:ml-8
+                          mssm:mb-4 mssm:mt-5 
+                          ${isVisible ? 'animate__heartBeat' : ''}
+                          
+                          transition-all duration-200 ease-out
+                        `}
                         style={{
                           animationDelay: `.${tabs.length * 2}s`,
                         }}
                       >
                         <MdFavorite fontSize={24} />
-                        <span className="mxs:text-xs text-sm mssm:block hidden font-bold uppercase">
+                        <span className="mxs:text-xs text-sm mssm:block font-bold uppercase">
                           favorites
                         </span>
                       </button>
@@ -205,6 +222,7 @@ export const Projects = () => {
                            mt-4 sm:mt-0
                            rounded-md
                            border border-teal-700
+                           shadow-lg
                         `}
               >
                 <div
