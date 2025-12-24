@@ -5,6 +5,7 @@ export const FullstackProjects: IProject[] = [
   {
     id: 'tesh731423',
     name: 'Teslo Shop Demo',
+    slug: 'teslo-shop-demo',
     shortDescription:
       'Demo Fullstack de e-commerce desarrollada en Next.js 14, con autenticación, carrito de compras y flujo de pagos, integrando manejo de estado, validaciones y base de datos.',
     image: imgTesloShop,
