@@ -126,6 +126,7 @@ export const NavBar = () => {
                 className={`
                   nav-link 
                   w-full max-w-[150px] sm:w-auto
+                  ${navLink.targetId === 'contact' ? 'flex sm:hidden' : ''}
                   ${navLink.isActive
                     ? 'animate__animated animate__rubberBand nav-link-active'
                     : isClickedOtherNavLinks.logo &&
