@@ -7,7 +7,7 @@ import TrackVisibility from 'react-on-screen';
 export const Contact = () => {
   return (
     <div
-      className="mt-8"
+      className="pt-8 bg-slate-900"
       id="contact"
     >
       <div className="container pt-6 pb-16 md:pb-8">
