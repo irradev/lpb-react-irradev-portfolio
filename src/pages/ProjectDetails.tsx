@@ -1,7 +1,7 @@
 
 import { useParams } from "react-router";
 import { IProject, projects } from "../data/projects";
-import { Link } from "react-router";
+import { Link, Navigate } from "react-router";
 import { BiArrowBack } from 'react-icons/bi'
 import { FiGithub, FiLink } from "react-icons/fi";
 import { TbBrandGumroad } from "react-icons/tb";
@@ -12,7 +12,7 @@ export const ProjectDetails = () => {
     const project = projects.find((project) => project.id === id);
 
     if (!project) {
-        return <div>Project not found</div>;
+        return <Navigate to="/page-not-found" />;
     }
 
     return (
