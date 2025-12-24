@@ -84,7 +84,7 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <nav className="flex justify-center items-center px-1 w-full h-14  backdrop-blur-sm  fixed bottom-0 z-30 sm:sticky sm:top-0">
+    <nav className="flex justify-center items-center px-1 w-full h-16 sm:h-14 backdrop-blur-sm fixed bottom-0 z-30 sm:sticky sm:top-0 bg-teal-900/40 sm:bg-transparent">
       <div className="flex justify-between items-center  sm:container w-full ">
         <div className="hidden sm:block flex-shrink-0">
           <Link
@@ -153,7 +153,7 @@ export const NavBar = () => {
               : ''
               }`}
           >
-            <BiSend className="text-2xl sm:hidden" />
+            <BiSend className="text-2xl hidden sm:block mr-2" />
             <span className="mxs:text-xs text-base sm:text-lg font-medium">
               ¡Contáctame!
             </span>
@@ -167,7 +167,7 @@ export const NavBar = () => {
 
 const BgOpacityEffect = () => {
   return (
-    <div className="w-full  fixed bottom-0 sm:px-4 sm:absolute sm:top-0 -z-10 bg-gradient-to-l from-transparent via-teal-900/60 opacity-80"></div>
+    <div className="w-full fixed bottom-0 sm:px-4 sm:absolute sm:top-0 -z-10 bg-gradient-to-l from-transparent via-teal-900/60 opacity-80"></div>
   );
 };
 
