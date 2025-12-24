@@ -1,6 +1,4 @@
 import {
-  AnchorHTMLAttributes,
-  MutableRefObject,
   ReactElement,
   useEffect,
   useRef,
@@ -8,15 +6,11 @@ import {
 } from 'react';
 import { useMySocialNetworks } from '../hooks/useMySocialNetworks';
 
-import { BsCodeSlash } from 'react-icons/bs';
-import { RiMenuUnfoldFill } from 'react-icons/ri';
 import { BiSend } from 'react-icons/bi';
 import { FiFolder } from 'react-icons/fi';
 import { AiOutlineHome } from 'react-icons/ai';
 
-import logo from '../assets/img/logo.png';
-
-type TtargetId = '#home' | '#skills' | '#projects';
+type TtargetId = '#home' | '#projects';
 
 interface INavLink {
   name: string;
@@ -35,12 +29,6 @@ export const NavBar = () => {
       targetId: '#home',
       isActive: false,
     },
-    // {
-    //   name: 'Skills',
-    //   icon: <BsCodeSlash className="text-3xl sm:hidden" />,
-    //   targetId: '#skills',
-    //   isActive: false,
-    // },
     {
       name: 'Proyectos',
       icon: <FiFolder className="text-3xl sm:hidden" />,
