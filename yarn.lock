@@ -776,6 +776,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cookie@npm:^1.0.1":
+  version: 1.1.1
+  resolution: "cookie@npm:1.1.1"
+  checksum: 10c0/79c4ddc0fcad9c4f045f826f42edf54bcc921a29586a4558b0898277fa89fb47be95bc384c2253f493af7b29500c830da28341274527328f18eba9f58afa112c
+  languageName: node
+  linkType: hard
+
 "cssesc@npm:^3.0.0":
   version: 3.0.0
   resolution: "cssesc@npm:3.0.0"
@@ -2056,13 +2063,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-multi-carousel@npm:^2.8.2":
-  version: 2.8.2
-  resolution: "react-multi-carousel@npm:2.8.2"
-  checksum: 10c0/13af9c7d576d0651f5b10c22c52adc5a5f7baf984284f111602daceff053f81aed65b34bc4f19ee8bd840361bf01aadae1e8a2ed13b17cbb190eebe4a8819b7b
-  languageName: node
-  linkType: hard
-
 "react-on-screen@npm:^2.1.1":
   version: 2.1.1
   resolution: "react-on-screen@npm:2.1.1"
@@ -2093,8 +2093,8 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-hook-form: "npm:^7.33.1"
     react-icons: "npm:^4.12.0"
-    react-multi-carousel: "npm:^2.8.2"
     react-on-screen: "npm:^2.1.1"
+    react-router: "npm:^7.11.0"
     react-router-dom: "npm:6"
     sweetalert2: "npm:^11.4.24"
     tailwindcss: "npm:^3.1.6"
@@ -2132,6 +2132,22 @@ __metadata:
   peerDependencies:
     react: ">=16.8"
   checksum: 10c0/ac8785a0b28d363940763e49119e5160331099d4f0196235b143ba9cdc984048ca44a77497f393b12165c99baf8ae6c11386f1f6f20ef52d99c2e07b31920862
+  languageName: node
+  linkType: hard
+
+"react-router@npm:^7.11.0":
+  version: 7.11.0
+  resolution: "react-router@npm:7.11.0"
+  dependencies:
+    cookie: "npm:^1.0.1"
+    set-cookie-parser: "npm:^2.6.0"
+  peerDependencies:
+    react: ">=18"
+    react-dom: ">=18"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+  checksum: 10c0/eb3693d63d1c52221a3449de5db170e2fa9e00536b011998b17f8a277f8b5e89b752d104dbbeb4ee3d474f8e4570167db00293b4510f63277e5e6658c5dab22b
   languageName: node
   linkType: hard
 
@@ -2270,6 +2286,13 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: 10c0/4afe5c986567db82f44c8c6faef8fe9df2a9b1d98098fc1721f57c696c4c21cebd572f297fc21002f81889492345b8470473bc6f4aff5fb032a6ea59ea2bc45e
+  languageName: node
+  linkType: hard
+
+"set-cookie-parser@npm:^2.6.0":
+  version: 2.7.2
+  resolution: "set-cookie-parser@npm:2.7.2"
+  checksum: 10c0/4381a9eb7ee951dfe393fe7aacf76b9a3b4e93a684d2162ab35594fa4053cc82a4d7d7582bf397718012c9adcf839b8cd8f57c6c42901ea9effe33c752da4a45
   languageName: node
   linkType: hard
 

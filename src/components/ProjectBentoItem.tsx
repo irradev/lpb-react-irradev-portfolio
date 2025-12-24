@@ -2,6 +2,7 @@ import React, { FC, SetStateAction, useRef, useState } from 'react';
 
 import { useImageTechnology } from '../hooks/useImageTechnology';
 import { existInFavorites, toggleFavorite, favoriteProjects } from '../utils';
+import { useNavigate } from 'react-router';
 
 import { TagStatusProject } from './TagStatusProject';
 
@@ -12,6 +13,7 @@ import { TbBrandGumroad } from 'react-icons/tb';
 import { IProject } from '../data/projects';
 
 import { TTabsState } from './Projects';
+
 
 import 'animate.css';
 
@@ -36,6 +38,7 @@ export const ProjectBentoItem: FC<ProjectBentoItemProps> = ({
   tabSelected,
   setClickedFavorites,
 }) => {
+  const navigate = useNavigate();
   const [isInFavorites, setIsInFavorites] = useState(
     existInFavorites(project.id)
   );
@@ -43,7 +46,12 @@ export const ProjectBentoItem: FC<ProjectBentoItemProps> = ({
   const $cardProject = useRef<HTMLDivElement | null>(null);
   const size = project.uiSize || 'medium';
 
-  const handleFavorites = (id: string) => {
+  const handleNavigate = () => {
+    navigate(`/project/${project.id}`);
+  };
+
+  const handleFavorites = (id: string, e: React.MouseEvent) => {
+    e.stopPropagation();
     toggleFavorite(id);
     setIsInFavorites(!isInFavorites);
     setClickedFavorites((prev) => ({
@@ -85,7 +93,7 @@ export const ProjectBentoItem: FC<ProjectBentoItemProps> = ({
         animationDelay: `${index / 14}s`,
       }}
     >
-      <div className={`project-bento-item`}>
+      <div className={`project-bento-item cursor-pointer`} onClick={handleNavigate}>
         {project.technologies.map((name, index) => (
           <div
             key={'tag_' + index + name}
@@ -164,14 +172,14 @@ export const ProjectBentoItem: FC<ProjectBentoItemProps> = ({
                 >
                   {isInFavorites ? (
                     <button
-                      onClick={() => handleFavorites(project.id)}
+                      onClick={(e) => handleFavorites(project.id, e)}
                       className="fav-button-project bg-teal-100 border border-slate-700 text-red-500"
                     >
                       <MdFavorite fontSize={24} />
                     </button>
                   ) : (
                     <button
-                      onClick={() => handleFavorites(project.id)}
+                      onClick={(e) => handleFavorites(project.id, e)}
                       className="fav-button-project border border-transparent bg-stone-300 text-slate-700  hover:text-red-500"
                     >
                       <MdFavoriteBorder fontSize={24} />

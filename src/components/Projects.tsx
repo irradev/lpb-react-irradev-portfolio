@@ -128,24 +128,54 @@ export const Projects = () => {
         <SectionCard className="h-full  relative">
           <div className="h-full w-full relative">
 
-            <div className=" flex flex-col-reverse sm:flex-col h-full w-full pb-3 sm:pb-6">
+            <div className=" flex flex-col h-full w-full pb-3">
               <TrackVisibility once>
                 {({ isVisible }) => (
-                  <div
-                    className={`
-                              flex-shrink-0 
-                              flex flex-row mssm:flex-col justify-center items-center 
-                              h-16
-                              ${favoriteProjects().length > 0
-                        ? 'mssm:my-7 mssm:gap-2.5'
-                        : ''
-                      } 
-                              my-2
-                              transition-all duration-200 ease-out
-                           `}
-                  >
-                    <button
+                  <div className="flex flex-col-reverse gap-2 justify-between md:flex-row">
+                    <div
                       className={`
+                      flex flex-row flex-wrap justify-start items-center 
+                      
+                      ${favoriteProjects().length > 0
+                          ? 'mssm:my-7 mssm:gap-2.5'
+                          : ''
+                        } 
+                      my-2
+                      transition-all duration-200 ease-out
+                    `}
+                    >
+
+                      <div className=" flex flex-wrap justify-center items-center mb-7">
+                        {tabs.map((tab, index) => (
+
+                          <FilterIconButton
+                            key={`button_tab_` + index}
+                            isVisible={isVisible}
+                            technology={tab}
+                            index={index}
+                            isActive={tabSelected === tab}
+                            onClick={() => onSelectTab(tab, index)}
+                          />
+                        ))}
+
+                      </div>
+                      <div
+                        className={`
+                          md:flex-shrink-0
+                          flex justify-center items-center
+                          ${favoriteProjects().length > 0
+                            ? 'mssm:w-full w-20 h-10 '
+                            : 'w-0 h-0'
+                          }
+                          relative md:absolute md:right-8
+                          transition-all duration-200 ease-out
+                        `}
+                      >
+                      </div>
+                    </div>
+                    <div className="flex flex-row justify-center items-center">
+                      <button
+                        className={`
                         ${tabSelected === 'ALL' ? 'border-b border-teal-300' : ''}
                         transition-all duration-200 ease-in-out
                         group
@@ -153,58 +183,30 @@ export const Projects = () => {
                         p-2.5
                         uppercase tracking-wide 
                         `}
-                      onClick={() => onSelectTab('ALL', 0)}
-                    >
-                      <span className="group-hover:text-teal-300">SHOW ALL</span>
-                    </button>
-                    <div className="md:flex-grow flex justify-center items-center mb-7">
-                      {tabs.map((tab, index) => (
+                        onClick={() => onSelectTab('ALL', 0)}
+                      >
+                        <span className="group-hover:text-teal-300">SHOW ALL</span>
+                      </button>
 
-                        <FilterIconButton
-                          key={`button_tab_` + index}
-                          isVisible={isVisible}
-                          technology={tab}
-                          index={index}
-                          isActive={tabSelected === tab}
-                          onClick={() => onSelectTab(tab, index)}
-                        />
-                      ))}
-                    </div>
-                    <div
-                      className={`
-                                    md:flex-shrink-0
-                                    flex justify-center items-center
-                                    ${favoriteProjects().length > 0
-                          ? 'mssm:w-full w-20 h-10 '
-                          : 'w-0 h-0'
-                        }
-                                    
-                                    relative md:absolute md:right-8
-                                    transition-all duration-200 ease-out
-                                 `}
-                    >
                       <button
                         ref={$favButton}
                         onClick={onShowFavoritProjects}
                         className={`
-                                    fav-button-project gap-2 
-                                    bg-red-500 text-stone-200 
-                                    px-4 py-1.5 
-                                    ml-6 sm:ml-8
-                                    mssm:mb-4 mssm:mt-5 
-                                    ${isVisible ? 'animate__heartBeat' : ''}
-                                    ${favoriteProjects().length > 0
-                            ? 'opacity-100'
-                            : 'opacity-0'
-                          }
-                                    transition-all duration-200 ease-out
-                                 `}
+                          fav-button-project gap-2 
+                          bg-red-500 text-stone-200 
+                          px-4 py-1.5 
+                          ml-6 sm:ml-8
+                          mssm:mb-4 mssm:mt-5 
+                          ${isVisible ? 'animate__heartBeat' : ''}
+                          
+                          transition-all duration-200 ease-out
+                        `}
                         style={{
                           animationDelay: `.${tabs.length * 2}s`,
                         }}
                       >
                         <MdFavorite fontSize={24} />
-                        <span className="mxs:text-xs text-sm mssm:block hidden font-bold uppercase">
+                        <span className="mxs:text-xs text-sm mssm:block font-bold uppercase">
                           favorites
                         </span>
                       </button>

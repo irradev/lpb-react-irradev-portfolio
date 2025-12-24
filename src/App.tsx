@@ -1,11 +1,11 @@
-import { MainLayout } from './layouts/MainLayout';
-import { BrowserRouter } from 'react-router-dom';
+import { AppRouter } from './router/AppRouter';
+import { HashRouter } from 'react-router';
 
 function App() {
    return (
-      <BrowserRouter>
-         <MainLayout />
-      </BrowserRouter>
+      <HashRouter>
+         <AppRouter />
+      </HashRouter>
    );
 }
 
