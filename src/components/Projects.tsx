@@ -145,7 +145,7 @@ export const Projects = () => {
                     `}
                     >
 
-                      <div className=" flex flex-wrap justify-center items-center mb-7">
+                      <div className="flex flex-wrap gap-6 sm:gap-0 justify-center items-center mt-8 sm:mt-6 sm:mb-7 ">
                         {tabs.map((tab, index) => (
 
                           <FilterIconButton
