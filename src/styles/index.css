@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes view-transition-old {
+   from {
+      opacity: 1;
+   }
+
+   to {
+      opacity: 0;
+   }
+}
+
+@keyframes view-transition-new {
+   from {
+      opacity: 0;
+   }
+
+   to {
+      opacity: 1;
+   }
+}
+
 @layer base {
 
    /************ Custom Font ************/
@@ -43,6 +63,8 @@
       /* @apply text-slate-100; */
       color: #fafafa !important;
       font-family: 'Centra', sans-serif !important;
+
+      @apply bg-gradient-to-b from-slate-900 via-teal-900 to-slate-900;
    }
 
    @media screen and (min-width: 640px) and (max-width: 768px) {
@@ -289,6 +311,24 @@
 
       100% {
          opacity: 1;
+      }
+   }
+
+   .horizontal-bounce-animation {
+      animation: horizontal-bounce 1s ease-in-out infinite;
+   }
+
+   @keyframes horizontal-bounce {
+      0% {
+         transform: translateX(0);
+      }
+
+      50% {
+         transform: translateX(10px);
+      }
+
+      100% {
+         transform: translateX(0);
       }
    }
 }

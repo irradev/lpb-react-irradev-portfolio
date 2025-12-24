@@ -31,7 +31,7 @@ export const FrontendProjects: IProject[] = [
     technologies: ['Flutter', 'Riverpod', 'go_router'],
     tags: ['Frontend', 'Flutter', 'Riverpod', 'go_router'],
     urlGitHub: 'https://github.com/irradev/fh-flutter-cinemapedia',
-    urlDemo: 'https://irradev.github.io/fh-flutter-cinemapedia/home',
+    urlDemo: 'https://irradev.github.io/fh-flutter-cinemapedia',
     type: 'Frontend',
     status: 'Terminado',
     uiSize: 'large',

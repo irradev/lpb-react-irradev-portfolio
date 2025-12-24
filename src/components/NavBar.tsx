@@ -170,7 +170,7 @@ export const NavBar = () => {
 
 const BgOpacityEffect = () => {
   return (
-    <div className="w-full h-14  fixed bottom-0 sm:px-4 sm:absolute sm:top-0 -z-10 bg-gradient-to-l from-transparent via-teal-900/60 opacity-80"></div>
+    <div className="w-full  fixed bottom-0 sm:px-4 sm:absolute sm:top-0 -z-10 bg-gradient-to-l from-transparent via-teal-900/60 opacity-80"></div>
   );
 };
 
