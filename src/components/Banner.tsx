@@ -17,13 +17,12 @@ export const Banner = () => {
       className="container banner "
       id="home"
     >
-      <span className="text-5xl md:text-8xl w-full text-center sm:mt-7 pt-4 block opacity-25">
+      <span className="text-5xl md:text-8xl w-full text-center sm:mt-7 pt-4 block text-secondary opacity-50">
         ¡Hola!
       </span>
       <div className=" flex flex-col md:flex-row-reverse justify-center items-center sm:mt-14 ">
         <div className="mx-auto md:mr-0 w-full max-w-xs md:max-w-md">
           <img
-            // className="updown-animation"
             className="mt-6 sm:mt-0 rounded-full shadow-lg border-2 breathing-animation"
             src={irradev}
             alt="irradev"
