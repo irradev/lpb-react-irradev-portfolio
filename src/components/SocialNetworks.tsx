@@ -29,7 +29,7 @@ export const SocialNetworks = () => {
                 animationDelay: '1.2s',
               }}
             >
-              <span className="mxs:text-2xl text-3xl font-bold hover:scale-125 hover:text-amber-300 transition-all-300-eio">
+              <span className="sm:text-3xl text-2xl font-bold hover:scale-125 hover:text-amber-300 transition-all-300-eio">
                 israeldevcorel@gmail.com
               </span>
               {/* <img

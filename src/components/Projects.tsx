@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import TrackVisibility from 'react-on-screen';
+import { useSearchParams } from 'react-router';
 import { favoriteProjects } from '../utils';
 import { SectionCard } from './ui/SectionCard';
 import { CardProject } from './CardProject';
@@ -30,6 +31,7 @@ export const Projects = () => {
     clicks: 0,
     isAdded: false,
   });
+  const [searchParams, setSearchParams] = useSearchParams();
   const $containerProjects = useRef<HTMLDivElement | null>(null);
   const $favButton = useRef<HTMLButtonElement | null>(null);
 
@@ -59,6 +61,22 @@ export const Projects = () => {
     }
   }, [clickedFavorites]);
 
+  useEffect(() => {
+    if (projects.length === 0) return;
+    const lastProjectViewed = searchParams.get('lastProjectViewed');
+    if (lastProjectViewed) {
+      const projectViewed = projects.find((project) => project.slug === lastProjectViewed);
+      if (projectViewed) {
+        searchParams.set('lastProjectViewed', '');
+        setSearchParams(searchParams);
+
+        setTimeout(() => {
+          document.getElementById(projectViewed.id)?.scrollIntoView({ behavior: 'instant' });
+        }, 200);
+      }
+    }
+  }, [projects, searchParams, setSearchParams]);
+
   const onSelectTab = (tab: TTabsState, index: number) => {
     if (tab === tabSelected) return;
 
@@ -77,6 +95,7 @@ export const Projects = () => {
       $containerProjects.current?.classList.remove('hidden');
     }
     setTabSelected(tab);
+    scrollToBoxProjects();
   };
 
   const onShowFavoritProjects = () => {
@@ -86,12 +105,17 @@ export const Projects = () => {
       )
     );
     setTabSelected('Favorites');
+    scrollToBoxProjects();
+  };
+
+  const scrollToBoxProjects = () => {
+    document.getElementById('box-projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const listProjects = useMemo(
     () => (
       <>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-5 auto-rows-[240px] md:mx-auto">
+        <div id="box-projects" className="grid grid-cols-1 md:grid-cols-4 gap-4 p-5 auto-rows-[240px] md:mx-auto">
           {projects.map((project, index) => (
             <ProjectBentoItem
               key={project.id}

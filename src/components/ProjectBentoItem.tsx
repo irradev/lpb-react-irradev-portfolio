@@ -47,7 +47,13 @@ export const ProjectBentoItem: FC<ProjectBentoItemProps> = ({
   const size = project.uiSize || 'medium';
 
   const handleNavigate = () => {
-    navigate(`/project/${project.slug}`);
+    document.body.style.transition = 'opacity 0.5s ease-in-out';
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      navigate(`/project/${project.slug}`);
+      document.body.style.opacity = '1';
+    }, 500);
   };
 
   const handleFavorites = (id: string, e: React.MouseEvent) => {
@@ -93,7 +99,7 @@ export const ProjectBentoItem: FC<ProjectBentoItemProps> = ({
         animationDelay: `${index / 14}s`,
       }}
     >
-      <div className={`project-bento-item cursor-pointer`} onClick={handleNavigate}>
+      <div id={project.id} className={`project-bento-item cursor-pointer`} onClick={handleNavigate}>
         {project.technologies.map((name, index) => (
           <div
             key={'tag_' + index + name}

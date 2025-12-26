@@ -1,7 +1,7 @@
 
 import { useParams } from "react-router";
 import { IProject, projects } from "../data/projects";
-import { Link, Navigate } from "react-router";
+import { Link, Navigate, useNavigate } from "react-router";
 import { BiArrowBack } from 'react-icons/bi'
 import { FiGithub, FiLink } from "react-icons/fi";
 import { TbBrandGumroad } from "react-icons/tb";
@@ -16,24 +16,38 @@ export const ProjectDetails = () => {
     }
 
     return (
-        <div className="container flex flex-col justify-center items-center mt-16">
-            <BackButton />
+        <div className="container flex flex-col justify-center items-center mt-8 sm:mt-16">
+            <BackButton project={project} className="hidden sm:inline-block" />
             <h1 className="self-start text-4xl font-bold mb-8 animate__animated animate__fadeInLeft" style={{ animationDelay: `0.2s` }}>{project?.name}</h1>
             <div className="flex flex-col md:flex-row justify-center items-start gap-8 mb-16">
                 <ProjectImage image={project?.image} name={project?.name} />
                 <ProjectContent project={project} />
             </div>
+            <BackButton project={project} className="inline-block sm:hidden" />
         </div>
     );
 };
 
-const BackButton = () => {
+const BackButton = ({ project, className }: { project: IProject, className?: string }) => {
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+            navigate("/?lastProjectViewed=" + project.slug);
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 200);
+        }, 500);
+
+    }
     return (
-        <div className="inline-block self-start hover:scale-105 transition-all duration-300 ease-in-out animate__animated animate__fadeInLeft">
-            <Link to="/" className="flex justify-start items-center mb-2 cursor-pointer hover:horizontal-bounce-animation text-secondary hover:text-teal-500 transition-colors duration-300 ease-in-out">
+        <div className={`self-start hover:scale-105 transition-all duration-300 ease-in-out animate__animated animate__fadeInLeft ${className}`}>
+            <button onClick={handleNavigate} className="flex justify-start items-center mb-2 cursor-pointer hover:horizontal-bounce-animation text-secondary hover:text-teal-500 transition-colors duration-300 ease-in-out">
                 <BiArrowBack className="mr-2 " />
                 Volver al Inicio
-            </Link>
+            </button>
         </div>
     )
 }
