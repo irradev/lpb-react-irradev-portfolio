@@ -23,14 +23,23 @@ export const MainLayout = () => {
 
 const BgTexts = () => {
 
-  let text = 'Frontend Engineer · UX/UI Driven · Clean Architecture & Clean Code · '
-  text = text.repeat(200)
+  const titles = ['Frontend Engineer', 'UX/UI Driven', 'Clean Architecture & Clean Code', 'Versatile & Adaptive', 'Passionate & Detail-Oriented', 'Always Learning']
 
   return (
-    <div className="fixed h-full w-[200vw] top-0 right-0 z-0 transform -rotate-45 break-all pointer-events-none">
-      <span className="text-7xl opacity-[0.02]">
-        {text}
-      </span>
+    <div className="fixed flex flex-wrap justify-center items-center h-full w-[200vw] -top-16 -right-16 z-0 transform -rotate-45 pointer-events-none">
+      {Array.from({ length: 200 }).map((_, index) => {
+        const randomIndex = Math.floor(Math.random() * titles.length)
+        return (
+          <>
+            <span key={index} className="text-7xl opacity-[0.02] inline-block py-12 mr-8">
+              {titles[randomIndex]}
+            </span>
+            <span className="text-7xl opacity-[0.02] inline-block py-12 mr-8">
+              ·
+            </span>
+          </>
+        )
+      })}
     </div>
   );
 };
