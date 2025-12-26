@@ -87,9 +87,7 @@ export const NavBar = () => {
 
 
   useEffect(() => {
-    console.log(location.pathname);
     if (location.pathname.includes('/project')) {
-      console.log('project');
       document.getElementById('nav-links')?.classList.add('hidden');
       document.getElementById('nav-links')?.classList.add('sm:flex');
     } else {

@@ -19,8 +19,8 @@ export const CardSkill: FC<CardSkillProps> = ({ name, icon, index }) => {
                   animationDelay: `${index / 8}s`,
                }}
             >
-               <div className="text-6xl ">{icon}</div>
-               <span className="text-lg">{name}</span>
+               <div className="text-6xl text-secondary">{icon}</div>
+               <span className="text-lg text-secondary">{name}</span>
             </div>
          )}
       </TrackVisibility>
