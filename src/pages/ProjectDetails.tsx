@@ -32,12 +32,17 @@ const BackButton = ({ project, className }: { project: IProject, className?: str
     const navigate = useNavigate();
 
     const handleNavigate = () => {
-        document.body.style.transition = 'opacity 0.5s ease-in-out';
-        document.body.style.opacity = '0';
+        const $mainLayout = document.getElementById('main-layout');
+        if ($mainLayout) {
+            $mainLayout.style.transition = 'opacity 0.5s ease-in-out';
+            $mainLayout.style.opacity = '0';
+        }
         setTimeout(() => {
             navigate("/?lastProjectViewed=" + project.slug);
             setTimeout(() => {
-                document.body.style.opacity = '1';
+                if ($mainLayout) {
+                    $mainLayout.style.opacity = '1';
+                }
             }, 200);
         }, 500);
 

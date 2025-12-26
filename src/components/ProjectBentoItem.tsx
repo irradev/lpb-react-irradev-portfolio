@@ -47,12 +47,17 @@ export const ProjectBentoItem: FC<ProjectBentoItemProps> = ({
   const size = project.uiSize || 'medium';
 
   const handleNavigate = () => {
-    document.body.style.transition = 'opacity 0.5s ease-in-out';
-    document.body.style.opacity = '0';
+    const $mainLayout = document.getElementById('main-layout');
+    if ($mainLayout) {
+      $mainLayout.style.transition = 'opacity 0.5s ease-in-out';
+      $mainLayout.style.opacity = '0';
+    }
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'instant' });
       navigate(`/project/${project.slug}`);
-      document.body.style.opacity = '1';
+      if ($mainLayout) {
+        $mainLayout.style.opacity = '1';
+      }
     }, 500);
   };
 
