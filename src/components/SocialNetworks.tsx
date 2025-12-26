@@ -11,7 +11,7 @@ export const SocialNetworks = () => {
   return (
     <div className="flex flex-col sm:flex-col justify-center items-center w-full md:w-3/6 text-shadow-xs">
       <div className="mt-5 sm:mb-4">
-        <TrackVisibility >
+        <TrackVisibility once>
           {({ isVisible }) => (
             <h2 className={`text-secondary mxs:text-xl text-2xl font-bold w-full text-center ${isVisible ? 'animate__animated animate__fadeInUp animate__delay-1s' : ''}`}>
               {' '}
@@ -19,7 +19,7 @@ export const SocialNetworks = () => {
             </h2>
           )}
         </TrackVisibility>
-        <TrackVisibility >
+        <TrackVisibility once>
           {({ isVisible }) => (
             <a
               href="mailto:israeldevcorel@gmail.com"
@@ -42,7 +42,7 @@ export const SocialNetworks = () => {
         </TrackVisibility>
       </div>
       <div className="mt-10 sm:mt-8 w-full">
-        <TrackVisibility >
+        <TrackVisibility once>
           {({ isVisible }) => (
             <h2 className={`text-secondary mxs:text-xl text-2xl font-bold w-full text-center ${isVisible ? 'animate__animated animate__fadeInUp' : ''}`}
               style={{
@@ -57,7 +57,7 @@ export const SocialNetworks = () => {
           )}
         </TrackVisibility>
         <div className="w-full">
-          <TrackVisibility>
+          <TrackVisibility once>
             {({ isVisible }) => (
               <div className="flex justify-evenly items-center w-full mt-1">
                 {allSocials.map((social, index) => (
