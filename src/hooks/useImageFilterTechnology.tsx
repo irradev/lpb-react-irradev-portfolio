@@ -11,6 +11,7 @@ import svgNextJs from '../assets/img/technologies/nextjs-logo.svg';
 import svgNuxtJs from '../assets/img/technologies/nuxtjs-logo.svg';
 import imgSergey from '../assets/img/technologies/sergey-32x32.png';
 import svgFlutter from '../assets/img/technologies/flutter.svg';
+import imgAngular from '../assets/img/technologies/angular.png';
 
 export const useImageFilterTechnology = (name: TFilterTechnologies, isActive: boolean) => {
 
@@ -24,6 +25,7 @@ export const useImageFilterTechnology = (name: TFilterTechnologies, isActive: bo
     'NextJs': svgNextJs,
     'Nuxt': svgNuxtJs,
     'Flutter': svgFlutter,
+    'Angular': imgAngular,
   }
 
   return (

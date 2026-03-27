@@ -9,4 +9,5 @@ export type TFilterTechnologies =
     | 'NextJs'
     | 'Nuxt'
     | 'Sergey'
-    | 'Flutter';
+    | 'Flutter'
+    | 'Angular';

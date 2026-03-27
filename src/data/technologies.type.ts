@@ -31,4 +31,10 @@ export type TTechnologies =
   | 'React Router'
   | 'Flutter'
   | 'Riverpod'
-  | 'go_router';
+  | 'go_router'
+  | 'Angular'
+  | 'Angular Material'
+  | 'RxJS'
+  | 'Signals'
+  | 'RxResource'
+  | 'DaisyUI';

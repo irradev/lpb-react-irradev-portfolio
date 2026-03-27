@@ -21,7 +21,7 @@ export type TTabsState = TFilterTechnologies | 'Favorites' | 'ALL';
 
 export const Projects = () => {
   //  const tabs: TProject[] = ['Frontend', 'Backend', 'Fullstack'];
-  const tabs: TFilterTechnologies[] = ['HTML', 'Javascript', 'Typescript', 'Sergey', 'React', 'Vue', 'NextJs', 'Nuxt', 'Flutter'];
+  const tabs: TFilterTechnologies[] = ['HTML', 'Javascript', 'Typescript', 'Sergey', 'React', 'Vue', 'NextJs', 'Nuxt', 'Flutter', 'Angular'];
   const [tabSelected, setTabSelected] = useState<TTabsState>('ALL');
   const [projects, setProjects] = useState<IProject[]>([]);
   const [clickedFavorites, setClickedFavorites] = useState<{

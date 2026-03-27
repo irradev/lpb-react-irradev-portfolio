@@ -22,10 +22,12 @@ import {
 import imgSergey from '../assets/img/technologies/sergey-32x32.png';
 import imgZustand from '../assets/img/technologies/zustand-logo_31x26.png';
 import imgRiverpod from '../assets/img/technologies/riverpod.png';
+import imgAngular from '../assets/img/technologies/angular.png';
 
 import svgTanstackQuery from '../assets/img/technologies/tanstack-logo-white.svg';
 import svgVuePinia from '../assets/img/technologies/vue-pinia-logo.svg';
 import svgFlutter from '../assets/img/technologies/flutter.svg';
+import svgDaisyUI from '../assets/img/technologies/daisyui.svg';
 
 export const useImageTechnology = (name: TTechnologies) => {
   switch (name) {
@@ -113,6 +115,22 @@ export const useImageTechnology = (name: TTechnologies) => {
           className="w-5 h-5 rounded-full"
           src={imgRiverpod}
           title="Riverpod"
+        />
+      );
+    case 'DaisyUI':
+      return (
+        <img
+          className="w-5 h-5 rounded-full"
+          src={svgDaisyUI}
+          title="DaisyUI"
+        />
+      );
+    case 'Angular':
+      return (
+        <img
+          className="w-5 h-5 rounded-full"
+          src={imgAngular}
+          title="Angular"
         />
       );
     default:

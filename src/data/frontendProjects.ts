@@ -20,8 +20,24 @@ import imgSergeyXVTemplate from '../assets/img/projects/sergey-xv-template.png';
 import imgHtmlTuContaEnLinea from '../assets/img/projects/html-tu-conta-en-linea.png';
 import imgVueAlegraWorldPics from '../assets/img/projects/vue-alegra-world-pics.png';
 import imgFluterCinemapedia from '../assets/img/projects/flutter-cinemapedia.png';
+import imgAngularCountryApp from '../assets/img/projects/angular-country-app.png';
 
 export const FrontendProjects: IProject[] = [
+  {
+    id: 'angularca731430',
+    name: 'Country App',
+    slug: 'country-app',
+    shortDescription:
+      'Aplicación web desarrollada en Angular aplicando arquitectura modular  feature-first, gestion de estado mediante Signals y rxResource, y estilizada utilizando Tailwind CSS y DaisyUI.',
+    image: imgAngularCountryApp,
+    technologies: ['Angular', 'DaisyUI', 'Tailwind'],
+    tags: ['Frontend', 'Angular', 'DaisyUI', 'Tailwind'],
+    urlGitHub: 'https://github.com/irradev/fh-angular-country-app',
+    urlDemo: 'https://fh-angular-country-app.netlify.app/',
+    type: 'Frontend',
+    status: 'Terminado',
+    uiSize: 'medium',
+  },
   {
     id: 'fluttercd731427',
     name: 'Cinemapedia',
