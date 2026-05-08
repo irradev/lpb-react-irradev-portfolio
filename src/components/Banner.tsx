@@ -22,7 +22,7 @@ export const Banner = () => {
       <div className=" flex flex-col md:flex-row-reverse justify-center items-center sm:mt-14 ">
         <div className="mx-auto md:mr-0 w-full max-w-xs z-20">
           <img
-            className="mt-6 sm:mt-0 rounded-full shadow-lg border-2 breathing-animation object-cover blur-[0.5px] w-72 h-72 grayscale-[50%] brightness-[90%] contrast-[105%] mb-0 sm:mb-8 md:mb-0"
+            className="mt-6 sm:mt-0 rounded-full shadow-lg border-2 breathing-animation object-cover w-72 h-72 grayscale-[20%] contrast-[105%] mb-0 sm:mb-8 md:mb-0"
             src={irradev}
             alt="irradev"
           />
