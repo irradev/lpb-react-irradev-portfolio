@@ -8,19 +8,17 @@ import { TabButton } from './TabButton';
 
 import { MdFavorite } from 'react-icons/md';
 
-import { projects as dataProjects, IProject, TProject } from '../data/projects';
+import { projects as dataProjects, IProject } from '../data/projects';
 
 import 'animate.css';
 import { SectionTitle } from './ui/SectionTitle';
 import { ProjectBentoItem } from './ProjectBentoItem';
 import { FilterIconButton } from './FilterIconButton';
-import { TTechnologies } from '../data/technologies.type';
 import { TFilterTechnologies } from '../data/filterTechnologies.type';
 
 export type TTabsState = TFilterTechnologies | 'Favorites' | 'ALL';
 
 export const Projects = () => {
-  //  const tabs: TProject[] = ['Frontend', 'Backend', 'Fullstack'];
   const tabs: TFilterTechnologies[] = ['HTML', 'Javascript', 'Typescript', 'Sergey', 'React', 'Vue', 'NextJs', 'Nuxt', 'Flutter', 'Angular'];
   const [tabSelected, setTabSelected] = useState<TTabsState>('ALL');
   const [projects, setProjects] = useState<IProject[]>([]);

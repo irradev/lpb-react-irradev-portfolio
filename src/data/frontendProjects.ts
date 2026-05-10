@@ -29,7 +29,7 @@ export const FrontendProjects: IProject[] = [
     name: 'Angular MX Logistics',
     slug: 'amazon-mx-logistics',
     shortDescription:
-      'Aplicación web desarrollada en Angular aplicando arquitectura modular  feature-first, gestion de estado mediante Signals y rxResource, y estilizada utilizando Tailwind CSS y DaisyUI.',
+      'Aplicación web interactiva enfocada en experiencia de usuario para explorar centros logísticos de Amazon en México utilizando Angular y Mapbox.',
     image: imgAngularAmazonMxLogistics,
     technologies: ['Angular', 'DaisyUI', 'Tailwind', 'Mapbox'],
     tags: ['Frontend', 'Angular', 'DaisyUI', 'Tailwind', 'Mapbox'],
@@ -97,7 +97,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://tu-conta-en-linea.netlify.app/',
     type: 'Frontend',
     status: 'Terminado',
-    uiSize: 'small',
+    uiSize: 'medium',
   },
   {
     id: 'serxv731427',
@@ -112,7 +112,7 @@ export const FrontendProjects: IProject[] = [
     urlDemo: 'https://lpb-plantilla-invitacion-xv.vercel.app/',
     type: 'Frontend',
     status: 'Terminado',
-    uiSize: 'small',
+    uiSize: 'large',
   },
   {
     id: 'vupok731426',
