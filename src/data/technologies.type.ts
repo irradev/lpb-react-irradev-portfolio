@@ -37,4 +37,5 @@ export type TTechnologies =
   | 'RxJS'
   | 'Signals'
   | 'RxResource'
-  | 'DaisyUI';
+  | 'DaisyUI'
+  | 'Mapbox';

@@ -21,8 +21,24 @@ import imgHtmlTuContaEnLinea from '../assets/img/projects/html-tu-conta-en-linea
 import imgVueAlegraWorldPics from '../assets/img/projects/vue-alegra-world-pics.png';
 import imgFluterCinemapedia from '../assets/img/projects/flutter-cinemapedia.png';
 import imgAngularCountryApp from '../assets/img/projects/angular-country-app.png';
+import imgAngularAmazonMxLogistics from '../assets/img/projects/angular-amazon-mx-logistics.png';
 
 export const FrontendProjects: IProject[] = [
+  {
+    id: 'angularmxlo731431',
+    name: 'Angular MX Logistics',
+    slug: 'amazon-mx-logistics',
+    shortDescription:
+      'Aplicación web desarrollada en Angular aplicando arquitectura modular  feature-first, gestion de estado mediante Signals y rxResource, y estilizada utilizando Tailwind CSS y DaisyUI.',
+    image: imgAngularAmazonMxLogistics,
+    technologies: ['Angular', 'DaisyUI', 'Tailwind', 'Mapbox'],
+    tags: ['Frontend', 'Angular', 'DaisyUI', 'Tailwind', 'Mapbox'],
+    urlGitHub: 'https://github.com/irradev/lpb-amazon-mx-logistics-map',
+    urlDemo: 'https://amazon-mx-logistics.vercel.app/',
+    type: 'Frontend',
+    status: 'Terminado',
+    uiSize: 'large',
+  },
   {
     id: 'angularca731430',
     name: 'Country App',

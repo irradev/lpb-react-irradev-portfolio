@@ -75,8 +75,8 @@ const ProjectContent = ({ project }: { project: IProject }) => {
             <div className="mt-8">
                 <h2 className="text-2xl font-bold mb-2">Tecnologías Utilizadas</h2>
                 <ul className="list-disc pl-6">
-                    {project?.tags?.map((tag: string, index: number) => (
-                        <li key={index}>{tag}</li>
+                    {project?.technologies?.map((technology: string, index: number) => (
+                        <li key={index}>{technology}</li>
                     ))}
                 </ul>
             </div>

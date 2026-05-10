@@ -23,6 +23,7 @@ import imgSergey from '../assets/img/technologies/sergey-32x32.png';
 import imgZustand from '../assets/img/technologies/zustand-logo_31x26.png';
 import imgRiverpod from '../assets/img/technologies/riverpod.png';
 import imgAngular from '../assets/img/technologies/angular.png';
+import imgMapbox from '../assets/img/technologies/mapbox-logo.png';
 
 import svgTanstackQuery from '../assets/img/technologies/tanstack-logo-white.svg';
 import svgVuePinia from '../assets/img/technologies/vue-pinia-logo.svg';
@@ -30,6 +31,17 @@ import svgFlutter from '../assets/img/technologies/flutter.svg';
 import svgDaisyUI from '../assets/img/technologies/daisyui.svg';
 
 export const useImageTechnology = (name: TTechnologies) => {
+
+  const getImageHtml = (src: string, title: string, classes?: string) => {
+    return (
+      <img
+        className={`w-5 h-5 rounded-full ${classes}`}
+        src={src}
+        title={title}
+      />
+    );
+  }
+
   switch (name) {
     case 'HTML':
       return <SiHtml5 fontSize={20} />;
@@ -70,70 +82,25 @@ export const useImageTechnology = (name: TTechnologies) => {
     case 'Vitest':
       return <SiVitest fontSize={20} />;
     case 'Zustand':
-      return (
-        <img
-          className="w-5 h-5 rounded-full"
-          src={imgZustand}
-          title="Zustand"
-        />
-      );
+      return getImageHtml(imgZustand, 'Zustand');
     case 'Sergey':
-      return (
-        <img
-          className="w-5 h-5 rounded-full"
-          src={imgSergey}
-          title="SSG Sergey"
-        />
-      );
+      return getImageHtml(imgSergey, 'SSG Sergey');
     case 'TanStackQuery':
-      return (
-        <img
-          className="w-5 h-5 rounded-full"
-          src={svgTanstackQuery}
-          title="TanStackQuery"
-        />
-      );
+      return getImageHtml(svgTanstackQuery, 'TanStackQuery');
     case 'Pinia':
-      return (
-        <img
-          className="w-5 h-5 rounded-full"
-          src={svgVuePinia}
-          title="Pinia"
-        />
-      );
+      return getImageHtml(svgVuePinia, 'Pinia');
     case 'Flutter':
-      return (
-        <img
-          className="w-5 h-5 rounded-full"
-          src={svgFlutter}
-          title="Flutter"
-        />
-      );
+      return getImageHtml(svgFlutter, 'Flutter');
     case 'Riverpod':
-      return (
-        <img
-          className="w-5 h-5 rounded-full"
-          src={imgRiverpod}
-          title="Riverpod"
-        />
-      );
+      return getImageHtml(imgRiverpod, 'Riverpod');
     case 'DaisyUI':
-      return (
-        <img
-          className="w-5 h-5 rounded-full"
-          src={svgDaisyUI}
-          title="DaisyUI"
-        />
-      );
+      return getImageHtml(svgDaisyUI, 'DaisyUI');
     case 'Angular':
-      return (
-        <img
-          className="w-5 h-5 rounded-full"
-          src={imgAngular}
-          title="Angular"
-        />
-      );
+      return getImageHtml(imgAngular, 'Angular');
+    case 'Mapbox':
+      return getImageHtml(imgMapbox, 'Mapbox');
     default:
       return <span className="text-xs font-bold">{name}</span>;
   }
+
 };
