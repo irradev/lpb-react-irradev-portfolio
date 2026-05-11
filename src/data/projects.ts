@@ -13,6 +13,7 @@ export interface IProject {
   name: string;
   slug: string;
   shortDescription: string;
+  note?: string;
   image: string;
   technologies: TTechnologies[];
   urlGitHub?: string;

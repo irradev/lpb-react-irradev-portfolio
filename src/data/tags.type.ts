@@ -1,4 +1,4 @@
 
 import { TTechnologies } from './technologies.type';
 
-export type TTags = TTechnologies | 'Frontend' | 'Backend' | 'Fullstack';
+export type TTags = TTechnologies | 'Frontend' | 'Backend' | 'Fullstack' | 'Landing Page';

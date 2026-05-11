@@ -101,13 +101,14 @@ export const FrontendProjects: IProject[] = [
   },
   {
     id: 'serxv731427',
-    name: 'Plantilla Invitación de XV años',
-    slug: 'plantilla-invitacion-xv',
+    name: 'Landing XV Años',
+    slug: 'landing-xv-anos',
     shortDescription:
-      'Plantilla web para invitación de XV años desarrollada para un cliente real, construida con HTML, JavaScript puro y Tailwind, enfocada en una experiencia clara y estética, con funcionalidades como cuenta regresiva, galería, mapa y contacto por WhatsApp.',
+      'Invitación digital de XV años desarrollada para un cliente real, enfocada en ofrecer una experiencia moderna y accesible desde dispositivos móviles.',
+    note: 'Contenido visual y datos sensibles modificados para fines de portafolio.',
     image: imgSergeyXVTemplate,
     technologies: ['Sergey', 'Tailwind'],
-    tags: ['Frontend', 'Sergey', 'Tailwind'],
+    tags: ['Frontend', 'Landing Page', 'Sergey', 'Tailwind'],
     urlGitHub: 'https://github.com/irradev/lpb-plantilla-invitacion-xv',
     urlDemo: 'https://lpb-plantilla-invitacion-xv.vercel.app/',
     type: 'Frontend',

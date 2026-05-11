@@ -69,7 +69,10 @@ const ProjectContent = ({ project }: { project: IProject }) => {
     return (
         <div className="w-full animate__animated animate__fadeInUp" style={{ animationDelay: `0.4s` }}>
             {/* <h1 className="text-4xl font-bold mb-4">{project?.name}</h1> */}
-            <p className="text-lg">{project?.shortDescription}</p>
+            <p className="text-lg md:text-xl">{project?.shortDescription}</p>
+            {project?.note ? (
+                <p className="text-sm md:text-base font-light text-gray-300 mt-6 italic tracking-wide">{project?.note}</p>
+            ) : null}
 
             {/* Technologies */}
             <div className="mt-8">
