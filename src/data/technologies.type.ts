@@ -38,4 +38,6 @@ export type TTechnologies =
   | 'Signals'
   | 'RxResource'
   | 'DaisyUI'
-  | 'Mapbox';
+  | 'Mapbox'
+  | 'OpenCode AI'
+  | 'React Native';

@@ -22,8 +22,24 @@ import imgVueAlegraWorldPics from '../assets/img/projects/vue-alegra-world-pics.
 import imgFluterCinemapedia from '../assets/img/projects/flutter-cinemapedia.png';
 import imgAngularCountryApp from '../assets/img/projects/angular-country-app.png';
 import imgAngularAmazonMxLogistics from '../assets/img/projects/angular-amazon-mx-logistics.png';
+import imgReactNativePokedexSM from '../assets/img/projects/rn-pokedex-sm.jpg';
 
 export const FrontendProjects: IProject[] = [
+    {
+    id: 'rnpokedexsm731432',
+    name: 'React Native Pokedex',
+    slug: 'react-native-pokedex-op',
+    shortDescription:
+      'Pokédex desarrollada con React Native y TanStack Query. Proyecto enfocado en consumo de APIs, gestión de estado remoto y experiencia de usuario, incorporando animaciones, efectos parallax y asistencia de OpenCode para acelerar tareas de desarrollo.',
+    image: imgReactNativePokedexSM,
+    technologies: ['React Native', 'TanStackQuery', 'Typescript', 'OpenCode AI'],
+    tags: ['Frontend', 'React', 'React Native', 'TanStackQuery', 'Typescript', 'OpenCode AI'],
+    urlGitHub: 'https://github.com/irradev/sm-rn-pokedex',
+    urlDemo: 'https://sm-reactnative-pokedex.netlify.app/',
+    type: 'Frontend',
+    status: 'Terminado',
+    uiSize: 'medium',
+  },
   {
     id: 'angularmxlo731431',
     name: 'Angular MX Logistics',

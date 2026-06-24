@@ -2,7 +2,7 @@ import { TTechnologies } from '../data/technologies.type';
 
 import { FaReact, FaVuejs, FaSass } from 'react-icons/fa';
 import { IoLogoVue } from "react-icons/io5";
-import { TbBrandNextjs } from 'react-icons/tb';
+import { TbBrandNextjs, TbBrandReactNative } from 'react-icons/tb';
 import {
   SiHtml5,
   SiCss3,
@@ -29,6 +29,7 @@ import svgTanstackQuery from '../assets/img/technologies/tanstack-logo-white.svg
 import svgVuePinia from '../assets/img/technologies/vue-pinia-logo.svg';
 import svgFlutter from '../assets/img/technologies/flutter.svg';
 import svgDaisyUI from '../assets/img/technologies/daisyui.svg';
+import icoOpenCodeAI from '../assets/img/technologies/open_code_ai.ico';
 
 export const useImageTechnology = (name: TTechnologies) => {
 
@@ -81,6 +82,8 @@ export const useImageTechnology = (name: TTechnologies) => {
       return <FaSass fontSize={20} />;
     case 'Vitest':
       return <SiVitest fontSize={20} />;
+    case 'React Native':
+    return  <TbBrandReactNative fontSize={20} />;
     case 'Zustand':
       return getImageHtml(imgZustand, 'Zustand');
     case 'Sergey':
@@ -99,6 +102,11 @@ export const useImageTechnology = (name: TTechnologies) => {
       return getImageHtml(imgAngular, 'Angular');
     case 'Mapbox':
       return getImageHtml(imgMapbox, 'Mapbox');
+    case 'OpenCode AI':
+      return getImageHtml(icoOpenCodeAI, 'OpenCode AI');
+
+    case 'OpenCode AI':
+      return <span className="text-xs font-bold">OpenCode</span>;
     default:
       return <span className="text-xs font-bold">{name}</span>;
   }
